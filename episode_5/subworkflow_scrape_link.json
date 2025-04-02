@@ -1,0 +1,382 @@
+{
+  "name": "Scrape link subworkflow",
+  "nodes": [
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1500,
+        680
+      ],
+      "id": "e6c9890c-5b74-4729-9d86-a583ad9e957a",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "9z2BF40dqIRV3ovL",
+          "name": "OpenAI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data",
+              "cssSelector": "body",
+              "returnValue": "html"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        720,
+        440
+      ],
+      "id": "1847df7c-d220-4386-8a96-a747a7a2b64d",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "html": "={{ $json.data }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        940,
+        440
+      ],
+      "id": "27a619b8-a3d4-4b4d-a433-c2c38c01ac3f",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"summary\": {\n            \"type\": \"string\",\n            \"description\": \"the summary of the content\"\n        }\n    },\n    \"required\": [\n        \"summary\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1860,
+        660
+      ],
+      "id": "f1610517-e1c8-4e4f-bdbf-ed9b65e332e0",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "link"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        440
+      ],
+      "id": "89ac6c83-9382-4574-a529-f88b3614d8c2",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.link }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        440
+      ],
+      "id": "23835380-937a-4705-832e-a9e912135b03",
+      "name": "get the content of the link",
+      "alwaysOutputData": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "99cf6ac1-d77b-491c-86dc-44555032f5b0",
+              "leftValue": "={{ $json.error }}",
+              "rightValue": "",
+              "operator": {
+                "type": "object",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "e6dd1301-acb8-4dc4-83d0-4d5b1a7f2036",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        480,
+        440
+      ],
+      "id": "78fc01c4-c891-4994-9b6e-d9b291fe5912",
+      "name": "filter out the errors"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e70a34f7-b723-47fe-a62f-1a318c483959",
+              "leftValue": "={{ $json.data }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        1160,
+        440
+      ],
+      "id": "e8c8fd4b-89ba-4773-825e-41eef7c997ad",
+      "name": "filter empty results"
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  item.json.data = item.json.data.replace(/!\\[[^\\]]+\\]\\([^\\)]+\\)/g, \"\") // remove images\n  item.json.data = item.json.data.replace(/\\[.*?\\]\\(.*?\\)/g, \"\") // remove links\n  item.json.data = item.json.data.replace(/\\n{2,}/g, \"\") // remove extra new line characters\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        440
+      ],
+      "id": "6bfb39a3-ab85-4cbb-a087-29b457cfe9d6",
+      "name": "cleanup the markdown"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Please summarize the following content for me. Make sure to capture all the information in a concise format. Don't miss anything important.\nIgnore generic website elements like cookie policies, etc.\n\n<Content>\n{{ $json.data }}\n</Content>",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        1600,
+        440
+      ],
+      "id": "f487b563-4fb0-4622-96bb-a35a35980045",
+      "name": "summarize",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "53e16d12-8a90-4cf8-85e2-6aa2ef2ae3af",
+              "name": "data",
+              "value": "={{ $('summarize').item.json.output.summary }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1980,
+        440
+      ],
+      "id": "0bbc7a55-1e3d-4074-84f8-a9da0edc624b",
+      "name": "set data field"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "summarize",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "node": "filter empty results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "summarize",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "get the content of the link",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get the content of the link": {
+      "main": [
+        [
+          {
+            "node": "filter out the errors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "filter out the errors": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "filter empty results": {
+      "main": [
+        [
+          {
+            "node": "cleanup the markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cleanup the markdown": {
+      "main": [
+        [
+          {
+            "node": "summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "summarize": {
+      "main": [
+        [
+          {
+            "node": "set data field",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "set data field": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f3b3a7a5-7f32-4105-bcf8-7445f93178d5",
+  "meta": {
+    "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
+  },
+  "id": "0HtQ72bNs1lx7LHj",
+  "tags": []
+}
