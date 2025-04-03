@@ -8,4 +8,4 @@
 
 ## Watch the video
 
-[![Smart AI Blog/Article Writing System: Fully Automated Content Creation with n8n (Free Template)](https://img.youtube.com/vi/aAjspF1Vohg/0.jpg)](https://www.youtube.com/watch?v=aAjspF1Vohg)
+[![This AI agent writes blog posts and articles with n8n - with deep research (Free Template)](https://img.youtube.com/vi/aAjspF1Vohg/0.jpg)](https://www.youtube.com/watch?v=aAjspF1Vohg)
