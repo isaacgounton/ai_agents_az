@@ -2,7 +2,7 @@
 
 ## Get the resources
 
-- [Subworkflow: Google Deep Research](subworkflow_google_deep_research.json)
+- [Workflow: Google Deep Research](google_deep_research.json)
 
 ## Watch the video
 
