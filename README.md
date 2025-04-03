@@ -1,6 +1,6 @@
 # AI Agents A-Z
 
-In this repo, you can find the templates we created for the episodes of AI Agents A-Z.
+In this repo, you can find the n8n templates we created for the episodes of [AI Agents A-Z](https://www.youtube.com/channel/UCloXqLhp_KGhHBe1kwaL2Tg).
 
 ## Season 1
 
