@@ -5,10 +5,7 @@
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        -300,
-        0
-      ],
+      "position": [-300, 0],
       "id": "73fde98a-7475-4dc3-9fca-5f12ae3d1725",
       "name": "When clicking ‘Test workflow’"
     },
@@ -19,10 +16,7 @@
       },
       "type": "n8n-nodes-base.rssFeedRead",
       "typeVersion": 1.1,
-      "position": [
-        440,
-        0
-      ],
+      "position": [440, 0],
       "id": "5f97ff6d-1470-407b-8cd7-fa38d14dac3e",
       "name": "RSS Read"
     },
@@ -54,10 +48,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        660,
-        0
-      ],
+      "position": [660, 0],
       "id": "bfc75237-1c35-4aac-91b5-ed15d022e881",
       "name": "Edit Fields"
     },
@@ -69,10 +60,7 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        880,
-        0
-      ],
+      "position": [880, 0],
       "id": "78c29d9d-c0a2-454b-b60b-7e03e285a59e",
       "name": "Aggregate"
     },
@@ -84,10 +72,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
-      "position": [
-        1100,
-        0
-      ],
+      "position": [1100, 0],
       "id": "dde88d75-8b33-445d-bbde-a04e0449519b",
       "name": "Basic LLM Chain"
     },
@@ -97,10 +82,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
-      "position": [
-        1380,
-        240
-      ],
+      "position": [1380, 240],
       "id": "58d9b332-f8f6-476f-8914-8d54f7330312",
       "name": "Structured Output Parser"
     },
@@ -111,10 +93,7 @@
       },
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
-      "position": [
-        440,
-        460
-      ],
+      "position": [440, 460],
       "id": "e747196c-69b9-4ee1-a9b7-bbc4b0590364",
       "name": "Split Out"
     },
@@ -129,10 +108,7 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        660,
-        460
-      ],
+      "position": [660, 460],
       "id": "2d0fcb22-8b61-4e9f-aed7-567f45a9aff3",
       "name": "HTTP Request"
     },
@@ -152,10 +128,7 @@
       },
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
-      "position": [
-        880,
-        460
-      ],
+      "position": [880, 460],
       "id": "f19cfa14-88f8-41a0-a32d-234b9483ad01",
       "name": "HTML"
     },
@@ -167,10 +140,7 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        1100,
-        460
-      ],
+      "position": [1100, 460],
       "id": "fc5dd714-3368-4461-9ac8-13d660d5c772",
       "name": "Aggregate1"
     },
@@ -181,10 +151,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
-      "position": [
-        680,
-        920
-      ],
+      "position": [680, 920],
       "id": "c9a3c302-b0fb-4f01-9e42-8e5d3341ac8a",
       "name": "Basic LLM Chain1"
     },
@@ -195,10 +162,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
-      "position": [
-        1040,
-        920
-      ],
+      "position": [1040, 920],
       "id": "5f50e681-33fe-4269-98ea-fd0da357207f",
       "name": "Basic LLM Chain2"
     },
@@ -237,10 +201,7 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        1260,
-        1400
-      ],
+      "position": [1260, 1400],
       "id": "8cc43d5a-aac3-46b1-9cd3-5125c0dfb3fb",
       "name": "Gmail",
       "webhookId": "1b16f0aa-aa5f-431f-8e85-247f4e981d6c",
@@ -278,10 +239,7 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1560,
-        1400
-      ],
+      "position": [1560, 1400],
       "id": "482855b9-b956-4764-a5c1-b91ac7b5f3c4",
       "name": "If"
     },
@@ -293,10 +251,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
-      "position": [
-        1180,
-        1760
-      ],
+      "position": [1180, 1760],
       "id": "9fe4e696-78b9-450c-8dfe-3534aa497cd2",
       "name": "Basic LLM Chain3"
     },
@@ -306,10 +261,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
-      "position": [
-        1420,
-        2000
-      ],
+      "position": [1420, 2000],
       "id": "03742a64-3d46-40c1-a490-92a55a2f181d",
       "name": "Structured Output Parser1"
     },
@@ -329,10 +281,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1020,
-        1400
-      ],
+      "position": [1020, 1400],
       "id": "095112d6-fad0-4cf0-9f9d-d19734f5865e",
       "name": "Edit Fields1"
     },
@@ -352,10 +301,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1560,
-        1760
-      ],
+      "position": [1560, 1760],
       "id": "e1ff2b2c-9cb8-44b4-aeae-94b4f54adbf1",
       "name": "Edit Fields2"
     },
@@ -367,10 +313,7 @@
       },
       "type": "n8n-nodes-base.linkedIn",
       "typeVersion": 1,
-      "position": [
-        2140,
-        1380
-      ],
+      "position": [2140, 1380],
       "id": "d419be2a-b354-44b4-9983-8bb68109bb24",
       "name": "LinkedIn",
       "credentials": {
@@ -392,10 +335,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        660,
-        1420
-      ],
+      "position": [660, 1420],
       "id": "7ba465f4-e758-4840-b52d-d847fd93a626",
       "name": "gpt-4o",
       "credentials": {
@@ -416,10 +356,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        340,
-        1400
-      ],
+      "position": [340, 1400],
       "id": "601a56de-b256-49ca-a7d2-b85bd4b207b3",
       "name": "gpt-4o-mini",
       "credentials": {
@@ -437,10 +374,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        440,
-        -120
-      ],
+      "position": [440, -120],
       "id": "8cac87c7-c554-4713-80bf-46766820f350",
       "name": "Sticky Note"
     },
@@ -460,10 +394,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        20,
-        0
-      ],
+      "position": [20, 0],
       "id": "0503812a-e4c6-43b0-99e5-857f4c381bd4",
       "name": "Writing style"
     },
@@ -476,10 +407,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -20,
-        -180
-      ],
+      "position": [-20, -180],
       "id": "3aea4f53-5956-44e0-b164-d9f70b997c7e",
       "name": "Sticky Note1"
     },
@@ -491,10 +419,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        440,
-        340
-      ],
+      "position": [440, 340],
       "id": "f34a66e6-5531-4c05-a4fb-1d263c3b1ed5",
       "name": "Sticky Note2"
     },
@@ -506,10 +431,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        680,
-        800
-      ],
+      "position": [680, 800],
       "id": "dcb97ccf-b847-45fd-ae1c-58139463e43d",
       "name": "Sticky Note3"
     },
@@ -521,10 +443,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1020,
-        1280
-      ],
+      "position": [1020, 1280],
       "id": "4ffe9955-6636-47fd-a7b1-58bb19d3e660",
       "name": "Sticky Note4"
     },
@@ -536,10 +455,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1180,
-        1640
-      ],
+      "position": [1180, 1640],
       "id": "76c390ea-d297-4f52-a0aa-8b8e6f7832f9",
       "name": "Sticky Note5"
     },
@@ -552,10 +468,7 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        2100,
-        1300
-      ],
+      "position": [2100, 1300],
       "id": "e1edc57e-0b54-4b6e-8f62-95b1653b6d2a",
       "name": "Sticky Note6"
     }
