@@ -568,7 +568,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  const location = item.json.info.split('Location: ')[1]\n  item.json.location = location.slice(0, location.length - 1)\n}\n\nreturn $input.all();"
+        "jsCode": "for (const item of $input.all()) {\n  const location = item.json.info.split('Location:')[1]\n  item.json.location = location.slice(0, location.length - 1).replace(/\\n/g, '').trim()\n}\n\nreturn $input.all();"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1801,7 +1801,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "e24f4a4f-24be-46fb-ae90-22085a3097ed",
+  "versionId": "cf860203-1d5d-4400-8871-bc8fd93b8bd8",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
