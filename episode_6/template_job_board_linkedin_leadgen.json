@@ -19,7 +19,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3340,
+        3560,
         60
       ],
       "id": "a00fb760-ee18-4192-b8ab-9e829ea68007",
@@ -33,7 +33,7 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        3340,
+        3560,
         460
       ],
       "id": "e70b11e2-76ab-40c9-97ec-b8faf57b8a99",
@@ -60,7 +60,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3560,
+        3780,
         460
       ],
       "id": "0519d9c2-1bd8-48fd-a523-e5a852311ae6",
@@ -73,7 +73,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3780,
+        4000,
         460
       ],
       "id": "1fd7e856-1782-465a-a0ed-b86a47394ab8",
@@ -87,7 +87,7 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        3320,
+        3540,
         660
       ],
       "id": "fee9ab43-7998-4dfc-a0d1-6513bbef0aae",
@@ -120,7 +120,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3540,
+        3760,
         660
       ],
       "id": "52fb7c68-434c-4efc-a671-7f84b2c79c4e",
@@ -135,7 +135,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        3760,
+        3980,
         660
       ],
       "id": "f8d59b3b-ff80-4dfc-96b3-be4781481746",
@@ -149,7 +149,7 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        3300,
+        3520,
         880
       ],
       "id": "f89f08c4-0a1b-4cba-8219-d5d4800d67f3",
@@ -187,7 +187,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3520,
+        3740,
         880
       ],
       "id": "0a28de0a-eaa1-41ce-a271-3e8e155035e6",
@@ -200,7 +200,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        3740,
+        3960,
         880
       ],
       "id": "7041f6bd-ff5b-465b-88bb-a88bafc9d976",
@@ -233,7 +233,7 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        3960,
+        4180,
         880
       ],
       "id": "ba6385f9-b136-4439-8106-904484a13235",
@@ -248,7 +248,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        4180,
+        4400,
         880
       ],
       "id": "cb936423-3206-468c-a9b9-7e837b773fc7",
@@ -263,7 +263,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        3760,
+        3980,
         1100
       ],
       "id": "94276571-4e9a-44c5-b9d7-9781a67729e6",
@@ -277,7 +277,7 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        3320,
+        3540,
         1100
       ],
       "id": "52d74478-0b0a-4999-85a1-1e24e78576a0",
@@ -300,7 +300,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        4180,
+        4400,
         1160
       ],
       "id": "cd026b52-214c-4abc-8ce1-6a907c55570f",
@@ -314,7 +314,7 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        3320,
+        3540,
         1500
       ],
       "id": "c135cc5d-7e08-4ea1-b2ba-689e46296653",
@@ -329,7 +329,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        3760,
+        3980,
         1500
       ],
       "id": "ad9aa117-74cb-441c-9c98-4c35a1dfce90",
@@ -352,7 +352,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        4180,
+        4400,
         1500
       ],
       "id": "bf76022d-e1ab-4494-8e8b-7c6a66af875b",
@@ -368,7 +368,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3.1,
       "position": [
-        4820,
+        5040,
         480
       ],
       "id": "7302c508-591a-4387-a0e6-e141d62d29bc",
@@ -382,7 +382,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        5160,
+        5380,
         560
       ],
       "id": "20ad6cdc-2f56-4db9-b9e0-cfdb77a899da",
@@ -400,7 +400,7 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        5920,
+        6140,
         1080
       ],
       "id": "c443eb58-0cb7-4d88-b66c-a4c9bee9cda4",
@@ -420,7 +420,7 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        6100,
+        6320,
         1080
       ],
       "id": "d3c706de-2ab5-4ec5-8403-769c9eab6d81",
@@ -573,7 +573,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1980,
+        2200,
         0
       ],
       "id": "a4bab2bf-10a3-463d-bcd8-62838f914bca",
@@ -628,6 +628,15 @@
                 "type": "number",
                 "operation": "gt"
               }
+            },
+            {
+              "id": "ec5a091f-e9c1-4ed5-8e0e-af7ddcccf0db",
+              "leftValue": "={{ $json.items[0].link }}",
+              "rightValue": "linkedin.com",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
             }
           ],
           "combinator": "and"
@@ -664,7 +673,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        2180,
+        2280,
         480
       ],
       "id": "fde13240-b6a7-4c25-b2a4-cddb3a77cbb5",
@@ -725,7 +734,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        2520,
+        2740,
         480
       ],
       "id": "5a3edba8-5aef-4e55-b16f-010320ed5d30",
@@ -761,7 +770,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3120,
+        3340,
         60
       ],
       "id": "c5c1cc8e-62b2-47fb-8214-9136f0a93d02",
@@ -790,7 +799,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3120,
+        3340,
         460
       ],
       "id": "11abc9ee-1989-474b-b3c5-c51e0d1e108a",
@@ -815,7 +824,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3100,
+        3320,
         660
       ],
       "id": "9761d0bd-0525-4897-a217-20b95acba1c4",
@@ -839,7 +848,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3480,
+        3700,
         240
       ],
       "id": "65a1d070-fdb4-4ed2-8364-f9a7a0a308e1",
@@ -864,7 +873,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3080,
+        3300,
         880
       ],
       "id": "79dd423a-294e-43b1-b1a8-87a7cd2f59c5",
@@ -898,7 +907,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        3080,
+        3300,
         1120
       ],
       "id": "e9b72a69-5c29-4490-a3c0-6d94eb9fea29",
@@ -932,7 +941,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        3080,
+        3300,
         1520
       ],
       "id": "5ac34b71-37f3-48b2-9b5d-18e5aef13ef5",
@@ -955,7 +964,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3320,
+        3540,
         1720
       ],
       "id": "4e3a74a8-a29f-453c-975e-6a0d232c18b4",
@@ -978,7 +987,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3320,
+        3540,
         1280
       ],
       "id": "de21f912-2ff1-412f-aeb7-e8b93d2f4d2a",
@@ -1010,7 +1019,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3540,
+        3760,
         1100
       ],
       "id": "55f1f71b-918a-4854-9ff9-7c7726903c17",
@@ -1039,7 +1048,7 @@
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
       "position": [
-        3540,
+        3760,
         1500
       ],
       "id": "fcae2015-c82c-489e-a9e1-3add7557bbf0",
@@ -1054,7 +1063,7 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        5920,
+        6140,
         860
       ],
       "id": "a062f98b-5fec-437c-a6ab-10fa4d52ed3b",
@@ -1070,7 +1079,7 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        6280,
+        6500,
         860
       ],
       "id": "dad2eba2-5994-4c19-8cc4-aef177988065",
@@ -1133,7 +1142,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        6460,
+        6680,
         2060
       ],
       "id": "bc8ed2e4-1ec8-4bb0-859d-2f59cd48a175",
@@ -1163,11 +1172,24 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1960,
+        1840,
         480
       ],
       "id": "137ce2cb-4461-4c9f-8e0d-3941045be4c2",
       "name": "Set Linkedin URL from the first result"
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  item.json.linkedin_url = `https://linkedin.com${$input.first().json.linkedin_url.split('linkedin.com')[1]}`;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2060,
+        480
+      ],
+      "id": "93420f2d-e594-4bfd-95c5-596a9df384ec",
+      "name": "Clean linkedin url"
     }
   ],
   "pinData": {},
@@ -1756,6 +1778,17 @@
       "main": [
         [
           {
+            "node": "Clean linkedin url",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Clean linkedin url": {
+      "main": [
+        [
+          {
             "node": "Scrape LinkedIn",
             "type": "main",
             "index": 0
@@ -1768,7 +1801,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "2dab2644-3f3b-4911-ae37-836229ec9f90",
+  "versionId": "e24f4a4f-24be-46fb-ae90-22085a3097ed",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
