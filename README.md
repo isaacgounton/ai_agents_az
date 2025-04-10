@@ -9,3 +9,4 @@ In this repo, you can find the n8n templates we created for the episodes of [AI 
 - [Episode 3: Making LinkedIn posts using Human in the Loop approval process](episode_3)
 - [Episode 4: Deep Research Agent using Google](episode_4)
 - [Episode 5: Creating a blog writing system using deep research](episode_5)
+- [Episode 6: Lead generation with X-Ray search and LinkedIn](episode_6)
