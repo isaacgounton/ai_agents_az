@@ -428,7 +428,6 @@
     },
     {
       "parameters": {
-        "batchSize": 10,
         "options": {}
       },
       "type": "n8n-nodes-base.splitInBatches",
@@ -1180,7 +1179,7 @@
     },
     {
       "parameters": {
-        "jsCode": "for (const item of $input.all()) {\n  item.json.linkedin_url = `https://linkedin.com${$input.first().json.linkedin_url.split('linkedin.com')[1]}`;\n}\n\nreturn $input.all();"
+        "jsCode": "for (const item of $input.all()) {\n  const companySlugMatch = item.json.linkedin_url.match(/[^linkedin]+linkedin\\.com\\/company\\/([^\\/]+)/);\n  if (companySlugMatch) {\n    const companySlug = companySlugMatch[1];\n    item.json.linkedin_url = `https://www.linkedin.com/company/${companySlug}`;\n  }\n}\n\nreturn $input.all();"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1801,7 +1800,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "cf860203-1d5d-4400-8871-bc8fd93b8bd8",
+  "versionId": "8ad43938-fbb3-4bcd-8013-41bff59650a8",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
