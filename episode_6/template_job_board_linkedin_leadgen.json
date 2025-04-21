@@ -382,7 +382,7 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        5380,
+        5300,
         560
       ],
       "id": "20ad6cdc-2f56-4db9-b9e0-cfdb77a899da",
@@ -533,7 +533,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        1320,
+        1380,
         0
       ],
       "id": "f43e9074-6d23-4fa9-8e80-e92dec65777a",
@@ -564,19 +564,6 @@
       ],
       "id": "755c78d3-f71c-4ff4-bf74-071eb0a9c3c4",
       "name": "Extract job ad"
-    },
-    {
-      "parameters": {
-        "jsCode": "for (const item of $input.all()) {\n  const location = item.json.info.split('Location:')[1]\n  item.json.location = location.slice(0, location.length - 1).replace(/\\n/g, '').trim()\n}\n\nreturn $input.all();"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        2200,
-        0
-      ],
-      "id": "a4bab2bf-10a3-463d-bcd8-62838f914bca",
-      "name": "Extract location data"
     },
     {
       "parameters": {
@@ -1100,8 +1087,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        5820,
-        500
+        6020,
+        520
       ],
       "id": "9d23305b-a4a2-4143-a0eb-5252209197b5",
       "name": "Sticky Note2"
@@ -1110,12 +1097,12 @@
       "parameters": {
         "content": "# Extracting the data from LinkedIn\n\n## The CSS selectors could occasionally change - don't panic, very easy to fix, just replace them in the workflow. As of 25/4/10 these selectors are working",
         "height": 2160,
-        "width": 2920
+        "width": 3040
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2440,
+        2560,
         -220
       ],
       "id": "19d4f56f-562f-4677-acf6-d1e5b16ae847",
@@ -1130,8 +1117,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        6300,
-        1840
+        6620,
+        1780
       ],
       "id": "d99561f4-f73f-4f34-993b-a130b1912d86",
       "name": "Sticky Note4"
@@ -1141,8 +1128,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        6680,
-        2060
+        6780,
+        2020
       ],
       "id": "bc8ed2e4-1ec8-4bb0-859d-2f59cd48a175",
       "name": "Wait 5s",
@@ -1189,6 +1176,53 @@
       ],
       "id": "93420f2d-e594-4bfd-95c5-596a9df384ec",
       "name": "Clean linkedin url"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d5e4966d-3cb0-409f-9878-d227d6515afb",
+              "leftValue": "={{ $json.location }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        500
+      ],
+      "id": "2bc85940-b0bf-4d0b-8a94-02d78bcaf670",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  if (item.json.info.includes('Location:')) {\n    const location = item.json.info.split('Location:')[1]\n  item.json.location = location.slice(0, location.length - 1).replace(/\\n/g, '').trim()\n  }\n  \n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2120,
+        0
+      ],
+      "id": "cf415334-62c2-492c-9be7-e8f621533859",
+      "name": "Extract location data1"
     }
   ],
   "pinData": {},
@@ -1506,18 +1540,7 @@
       "main": [
         [
           {
-            "node": "Extract location data",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Extract location data": {
-      "main": [
-        [
-          {
-            "node": "Google X-Ray Search",
+            "node": "Extract location data1",
             "type": "main",
             "index": 0
           }
@@ -1794,13 +1817,42 @@
           }
         ]
       ]
+    },
+    "Extract location data1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Google X-Ray Search",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "8ad43938-fbb3-4bcd-8013-41bff59650a8",
+  "versionId": "1707d080-c030-4076-bf26-d85048958225",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
