@@ -20,8 +20,8 @@ docker run -it --rm --name shorts-creator -p 3123:3123 -e PEXELS_API_KEY=-e LOG_
 
 ### Resources
 
-- [Github](https://github.com/gyoridavid/short-video-maker)
-- [npm](https://www.npmjs.com/package/short-video-maker)
+- [Github repo](https://github.com/gyoridavid/short-video-maker)
+- [npm package](https://www.npmjs.com/package/short-video-maker)
 - [Docker](https://hub.docker.com/r/gyoridavid/short-video-maker)
 
 ## Watch the video
