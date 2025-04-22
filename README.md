@@ -10,3 +10,8 @@ In this repo, you can find the n8n templates we created for the episodes of [AI 
 - [Episode 4: Deep Research Agent using Google](episode_4)
 - [Episode 5: Creating a blog writing system using deep research](episode_5)
 - [Episode 6: Lead generation with X-Ray search and LinkedIn](episode_6)
+- [Episode 7: Creating Youtube short videos using our custom MCP server](episode_7)
+
+## MCP servers
+
+- [Short video maker](https://github.com/gyoridavid/short-video-maker)
