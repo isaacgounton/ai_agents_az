@@ -15,8 +15,10 @@ LOG_LEVEL=debug PEXELS_API_KEY= npx short-video-creator
 Alternatively
 
 ```bash
-docker run -it --rm --name shorts-creator -p 3123:3123 -e PEXELS_API_KEY=-e LOG_LEVEL=trace short-video-creator-short-creator
+docker run -it --rm --name shorts-creator -p 3123:3123 -e PEXELS_API_KEY= -e LOG_LEVEL=debug gyoridavid/short-video-maker:latest
 ```
+
+If you have an Nvidia GPU you can add the `--gpus=all` flag to the docker call to use GPU acceleration for whisper.cpp.
 
 ### Resources
 
