@@ -144,7 +144,8 @@
       "id": "c25a381c-6af5-46e7-8e46-1aeae7a249d8",
       "name": "Download the video",
       "alwaysOutputData": false,
-      "retryOnFail": false
+      "retryOnFail": false,
+      "disabled": true
     },
     {
       "parameters": {
@@ -168,7 +169,8 @@
           "id": "EvIEz3KvgFMPW9Ap",
           "name": "YouTube account"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {},
@@ -184,7 +186,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "=<Instruction>\nTurn the following joke into a video. Keep everything, but make slight tweaks so it's easy to understand it in a text-to-speech video format with subtitles.\n\nReturn the video ID and the title of the video for the Youtube upload.\n</Instruction>\n\n<Joke>\n{{ $json.data[1].title }}\n{{ $json.data[1].contentSnippet }}\n</Joke>",
+        "text": "=<Instruction>\nTurn the following joke into a video. Keep everything, but make slight tweaks so it's easy to understand it in a text-to-speech video format with subtitles.\n\nReturn the video ID and the title of the video for the Youtube upload.\n</Instruction>\n\n<Joke>\n{{ $json.data[8].title }}\n{{ $json.data[8].contentSnippet }}\n</Joke>",
         "hasOutputParser": true,
         "options": {}
       },
@@ -779,8 +781,8 @@
     },
     {
       "parameters": {
-        "content": "# MCP server\n\n## How to run it\n\n```bash\nLOG_LEVEL=debug PEXELS_API_KEY= npx short-video-creator\n```\n\nAlternatively\n\n```bash\ndocker run -it --rm --name shorts-creator -p 3123:3123 -e PEXELS_API_KEY=-e LOG_LEVEL=trace short-video-creator-short-creator\n```\n\n## Resources\n\n- [Github](https://github.com/gyoridavid/short-video-maker)\n- [npm](https://www.npmjs.com/package/short-video-maker)\n- [Docker](https://hub.docker.com/r/gyoridavid/short-video-maker)",
-        "height": 540,
+        "content": "# MCP server\n\n## How to run it\n\n#### Using npm\n\n```bash\nLOG_LEVEL=debug PEXELS_API_KEY= npx short-video-creator\n```\n\n#### Alternatively, using Docker\n\n#### CPU image\n\n```bash\ndocker run -it --rm --name short-video-maker -p 3123:3123 \\\n  -e PEXELS_API_KEY= \\\n  gyoridavid/short-video-maker:latest\n```\n\n#### NVIDIA GPUs\n```bash\ndocker run -it --rm --name shorts-video-maker -p 3123:3123 \\\n  -e PEXELS_API_KEY= --gpus=all \\\n  gyoridavid/short-video-maker:latest-cuda\n```\n\n## Resources\n\n- [Github](https://github.com/gyoridavid/short-video-maker)\n- [npm](https://www.npmjs.com/package/short-video-maker)\n- [Docker](https://hub.docker.com/r/gyoridavid/short-video-maker)",
+        "height": 880,
         "width": 1900,
         "color": 3
       },
@@ -788,7 +790,7 @@
       "typeVersion": 1,
       "position": [
         20,
-        -960
+        -1300
       ],
       "id": "5423e146-e8ec-4cd4-8040-b9596eac6d29",
       "name": "Sticky Note6"
@@ -1196,7 +1198,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "2185efd8-79f9-4218-a096-3c04381c521a",
+  "versionId": "3ff9066f-3233-4034-ae35-34de1ac0b39c",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
