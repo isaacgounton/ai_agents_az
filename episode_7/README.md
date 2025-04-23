@@ -8,14 +8,27 @@
 
 ### How to run it
 
+#### Using npm
+
 ```bash
 LOG_LEVEL=debug PEXELS_API_KEY= npx short-video-creator
 ```
 
-Alternatively
+#### Alternatively, using Docker
+
+#### CPU image
 
 ```bash
-docker run -it --rm --name shorts-creator -p 3123:3123 -e PEXELS_API_KEY= -e LOG_LEVEL=debug gyoridavid/short-video-maker:latest
+docker run -it --rm --name short-video-maker -p 3123:3123 \
+  -e PEXELS_API_KEY= \
+  gyoridavid/short-video-maker:latest
+```
+
+#### NVIDIA GPUs
+```bash
+docker run -it --rm --name shorts-video-maker -p 3123:3123 \
+  -e PEXELS_API_KEY= --gpus=all \
+  gyoridavid/short-video-maker:latest-cuda
 ```
 
 If you have an Nvidia GPU you can add the `--gpus=all` flag to the docker call to use GPU acceleration for whisper.cpp.
