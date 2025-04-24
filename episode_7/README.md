@@ -11,7 +11,7 @@
 #### Using npm
 
 ```bash
-LOG_LEVEL=debug PEXELS_API_KEY= npx short-video-creator
+LOG_LEVEL=debug PEXELS_API_KEY= npx short-video-maker
 ```
 
 #### Alternatively, using Docker
