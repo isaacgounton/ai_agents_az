@@ -3,6 +3,7 @@
 ## Get the template
 
 - [Template: Create youtube shorts using MCP + n8n](youtube_shorts_with_mcp_server.json)
+- [Template: Using Ollama + REST API to generate the video (100% free)](short-video-maker-rest-api.json)
 
 ## MCP server
 
@@ -25,6 +26,7 @@ docker run -it --rm --name short-video-maker -p 3123:3123 \
 ```
 
 #### NVIDIA GPUs
+
 ```bash
 docker run -it --rm --name shorts-video-maker -p 3123:3123 \
   -e PEXELS_API_KEY= --gpus=all \
@@ -58,5 +60,3 @@ If you have an Nvidia GPU you can add the `--gpus=all` flag to the docker call t
     </td>
   </tr>
 </table>
-
-

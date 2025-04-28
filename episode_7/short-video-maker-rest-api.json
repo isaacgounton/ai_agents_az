@@ -1,0 +1,477 @@
+{
+  "name": "Create video with REST API",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        0
+      ],
+      "id": "a5a3e8c4-3caf-4364-abc3-cc1bc856ba90",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "model": "mistral-small3.1:24b-instruct-2503-q8_0",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmOllama",
+      "typeVersion": 1,
+      "position": [
+        880,
+        440
+      ],
+      "id": "6290f0a8-5cc5-478e-a5dd-4e3eea7e34bf",
+      "name": "Ollama Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "cWXUsJ0LsqnzOEx0",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"scenes\": {\n            \"type\": \"array\",\n            \"description\": \"the scenes of the video\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"text\": {\n                        \"type\": \"string\",\n                        \"description\": \"the main content; this will be used to generate speech from\"\n                    },\n                    \"searchTerms\": {\n                        \"type\": \"array\",\n                        \"description\": \"the search terms to use to find background videos on pexels\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                },\n                \"required\": [\n                    \"text\",\n                    \"searchTerms\"\n                ]\n            }\n        }\n    },\n    \"required\": [\n        \"scenes\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        680,
+        340
+      ],
+      "id": "90375e21-18ae-4654-863f-4890c63d9ec8",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a19f9caa-f1aa-4ff0-a270-59248eeb27dd",
+              "name": "SERVER_URL",
+              "value": "http://host.docker.internal:3123",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -180,
+        0
+      ],
+      "id": "f762a541-290e-4b1e-8455-6518563dc16b",
+      "name": "Configure"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=I'm creating a video programmatically using an API.\nThe API needs scenes to work with.\nEach scene requires a text, that will be transformed to speech, and 2-3 one-word search terms, that would be used to search background videos in the pexels api.\n\nCreate a short, 2 scene video about how good it is to stay in school.",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        560,
+        0
+      ],
+      "id": "010aa83a-63d5-4a0f-905b-08c9048d8621",
+      "name": "Generate content"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Configure').item.json.SERVER_URL }}/api/short-video",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"scenes\": {{ JSON.stringify($('Generate content').item.json.output.scenes, null, 2) }},\n  \"config\": {\n    \"paddingBack\": 1500,\n    \"music\": \"{{ $json.output.musicTag }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1500,
+        0
+      ],
+      "id": "dc803a54-8b27-43b9-a25d-0238eaa9a33a",
+      "name": "Start generating the video"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1880,
+        -20
+      ],
+      "id": "b11043dc-2886-4b59-bf1a-77c69b117a89",
+      "name": "Wait",
+      "webhookId": "fe4501f9-3334-4fc8-b3dd-83ea0ebb14a2"
+    },
+    {
+      "parameters": {
+        "url": "=http://host.docker.internal:3123/api/short-video/{{ $('Generate video').item.json.output.videoId }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2680,
+        -120
+      ],
+      "id": "d84d7fcf-8fb1-4448-bf4b-294d0234ff96",
+      "name": "Download the video",
+      "alwaysOutputData": false,
+      "retryOnFail": false,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "={{ $('Generate video').item.json.output.videoTitle }}",
+        "regionCode": "HU",
+        "categoryId": "24",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        2920,
+        -120
+      ],
+      "id": "4aa43b38-d75c-4ecc-9544-f20f767dcffb",
+      "name": "Share on YouTube",
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "EvIEz3KvgFMPW9Ap",
+          "name": "YouTube account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Configure').item.json.SERVER_URL }}/api/short-video/{{ $('Start generating the video').item.json.videoId }}/status",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2100,
+        -20
+      ],
+      "id": "a81e85a6-7cd4-4913-930a-38243e067c6a",
+      "name": "Check video status",
+      "alwaysOutputData": false,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "6cc1bd80-2bb7-47b6-950e-be3d6a36a965",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "ready",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2320,
+        -20
+      ],
+      "id": "e95fa54e-5e37-4ebc-9ef8-6aa15ca9d0d6",
+      "name": "Ready?"
+    },
+    {
+      "parameters": {
+        "content": "# Configure the server URL\n\nIf you run n8n in docker, you should use host.docker.internal:3123\n\nIf you run n8n with npm, use localhost:3123",
+        "height": 620,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        -400
+      ],
+      "id": "c7ffa392-e51c-47d1-8484-d55b592426d3",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.SERVER_URL }}/api/music-tags",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        100,
+        0
+      ],
+      "id": "d6996735-2d5b-47c4-8b03-b500854cbb0d",
+      "name": "Get music tags"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"musicTag\": {\n            \"type\": \"string\",\n            \"description\": \"the selected music tag that goes well with the video\"\n        }\n    },\n    \"required\": [\n        \"musicTag\"\n    ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1180,
+        220
+      ],
+      "id": "bd3a5fde-591f-4370-8c01-4fa2e31da209",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=I'm generating a video programmatically using an API. I've already generated the scenes, and your task is to find the right music tag for he video.\n\n<VideoScenes>\n{{ $json.output.scenes.map(item => item.text).map(item => `<VideoScene>${item}</VideoScene>`).join('\\n') }}\n</VideoScenes>\n\n<MusicTags>\n{{ $('Group the music tags').item.json.data.map(item => `<MusicTag>${item}</MusicTag>`).join('\\n') }}\n</MusicTags>",
+        "hasOutputParser": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        1040,
+        0
+      ],
+      "id": "a77636e3-be3c-448f-a2b0-400efe418865",
+      "name": "Pick the right music"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        280,
+        0
+      ],
+      "id": "88035cf9-a503-4f84-8470-65a50e505c2e",
+      "name": "Group the music tags"
+    },
+    {
+      "parameters": {
+        "content": "# Increase me!",
+        "height": 360,
+        "width": 180
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        -180
+      ],
+      "id": "55a1717f-afbc-4c2d-b013-2a7d39e08e09",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Configure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Generate content",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Pick the right music",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Generate content",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Configure": {
+      "main": [
+        [
+          {
+            "node": "Get music tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate content": {
+      "main": [
+        [
+          {
+            "node": "Pick the right music",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Check video status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download the video": {
+      "main": [
+        [
+          {
+            "node": "Share on YouTube",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start generating the video": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check video status": {
+      "main": [
+        [
+          {
+            "node": "Ready?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ready?": {
+      "main": [
+        [
+          {
+            "node": "Download the video",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get music tags": {
+      "main": [
+        [
+          {
+            "node": "Group the music tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Pick the right music",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pick the right music": {
+      "main": [
+        [
+          {
+            "node": "Start generating the video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Group the music tags": {
+      "main": [
+        [
+          {
+            "node": "Generate content",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "83d3952b-f57a-4c46-be7a-88f8c9ffff44",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
+  },
+  "id": "KI8hRUNS9tBzzqMk",
+  "tags": []
+}
