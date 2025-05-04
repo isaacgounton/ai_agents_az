@@ -169,7 +169,7 @@
     {
       "parameters": {
         "operation": "sendAndWait",
-        "sendTo": "2rum2room2@gmail.com",
+        "sendTo": "YourGmailEmail@gmail.com",
         "subject": "[action required] LinkedIn post approval is needed",
         "message": "={{ $json.linkedin_post }}",
         "responseType": "customForm",
