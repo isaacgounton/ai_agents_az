@@ -3,10 +3,10 @@
 <table>
   <tr>
     <td style="vertical-align: top;">
-      <h2>Get the template</h2>
+      <h2>Get the free n8n JSON templates</h2>
       <ul>
-        <li><a href="youtube_shorts_with_mcp_server.json">Template: Create youtube shorts using MCP + n8n</a></li>
-        <li><a href="short-video-maker-rest-api.json">Template: Using Ollama + REST API to generate the video (100% free)</a></li>
+        <li><a href="youtube_shorts_with_mcp_server.json">Create youtube shorts using MCP + n8n</a></li>
+        <li><a href="short-video-maker-rest-api.json">Using Ollama + REST API to generate the video (100% free)</a></li>
       </ul>
     </td>
     <td>
