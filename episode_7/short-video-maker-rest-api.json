@@ -35,13 +35,13 @@
     {
       "parameters": {
         "schemaType": "manual",
-        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"scenes\": {\n            \"type\": \"array\",\n            \"description\": \"the scenes of the video\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"text\": {\n                        \"type\": \"string\",\n                        \"description\": \"the main content; this will be used to generate speech from\"\n                    },\n                    \"searchTerms\": {\n                        \"type\": \"array\",\n                        \"description\": \"the search terms to use to find background videos on pexels\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                },\n                \"required\": [\n                    \"text\",\n                    \"searchTerms\"\n                ]\n            }\n        }\n    },\n    \"required\": [\n        \"scenes\"\n    ]\n}"
+        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"video_title\": {\n          \"type\": \"string\",\n          \"description\": \"the title of the video we use on YouTube\"\n        },\n        \"scenes\": {\n            \"type\": \"array\",\n            \"description\": \"the scenes of the video\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"text\": {\n                        \"type\": \"string\",\n                        \"description\": \"the main content; this will be used to generate speech from\"\n                    },\n                    \"searchTerms\": {\n                        \"type\": \"array\",\n                        \"description\": \"the search terms to use to find background videos on pexels\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                },\n                \"required\": [\n                    \"text\",\n                    \"searchTerms\"\n                ]\n            }\n        }\n    },\n    \"required\": [\n        \"scenes\",\n        \"video_title\"\n    ]\n}"
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        680,
-        340
+        720,
+        320
       ],
       "id": "90375e21-18ae-4654-863f-4890c63d9ec8",
       "name": "Structured Output Parser"
@@ -82,7 +82,8 @@
         0
       ],
       "id": "010aa83a-63d5-4a0f-905b-08c9048d8621",
-      "name": "Generate content"
+      "name": "Generate content",
+      "retryOnFail": true
     },
     {
       "parameters": {
@@ -116,7 +117,7 @@
     },
     {
       "parameters": {
-        "url": "=http://host.docker.internal:3123/api/short-video/{{ $('Generate video').item.json.output.videoId }}",
+        "url": "=http://host.docker.internal:3123/api/short-video/{{ $('Start generating the video').item.json.videoId }}",
         "options": {}
       },
       "type": "n8n-nodes-base.httpRequest",
@@ -128,15 +129,14 @@
       "id": "d84d7fcf-8fb1-4448-bf4b-294d0234ff96",
       "name": "Download the video",
       "alwaysOutputData": false,
-      "retryOnFail": false,
-      "disabled": true
+      "retryOnFail": false
     },
     {
       "parameters": {
         "resource": "video",
         "operation": "upload",
-        "title": "={{ $('Generate video').item.json.output.videoTitle }}",
-        "regionCode": "HU",
+        "title": "={{ $('Generate content').item.json.output.video_title }}",
+        "regionCode": "US",
         "categoryId": "24",
         "options": {}
       },
@@ -208,15 +208,15 @@
     },
     {
       "parameters": {
-        "content": "# Configure the server URL\n\nIf you run n8n in docker, you should use host.docker.internal:3123\n\nIf you run n8n with npm, use localhost:3123",
-        "height": 620,
+        "content": "# Configure the server URL\n",
+        "height": 460,
         "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         -220,
-        -400
+        -240
       ],
       "id": "c7ffa392-e51c-47d1-8484-d55b592426d3",
       "name": "Sticky Note"
@@ -262,7 +262,8 @@
         0
       ],
       "id": "a77636e3-be3c-448f-a2b0-400efe418865",
-      "name": "Pick the right music"
+      "name": "Pick the right music",
+      "retryOnFail": true
     },
     {
       "parameters": {
@@ -280,15 +281,15 @@
     },
     {
       "parameters": {
-        "content": "# Increase me!",
+        "content": "# Set me up",
         "height": 360,
-        "width": 180
+        "width": 200
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         1840,
-        -180
+        -200
       ],
       "id": "55a1717f-afbc-4c2d-b013-2a7d39e08e09",
       "name": "Sticky Note1"
@@ -467,7 +468,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "83d3952b-f57a-4c46-be7a-88f8c9ffff44",
+  "versionId": "efadb478-93ee-4a6d-b4b7-80a7e250bf2d",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
