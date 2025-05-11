@@ -1,11 +1,11 @@
 # Setting up Instagram for automations with n8n
 
-## Convert the Instagram account to a business account
+## Convert the Instagram account to a professional account
 
 > [!IMPORTANT]  
-> Converting the Instagram account to a business account will make the account public
+> Converting the Instagram account to a professional (business or creator) account will make the account public
 
-In the Instagram application, follow these steps to convert your account to a business account.
+In the Instagram application, follow these steps to convert your account to a professional account.
 
 <table>
   <tr>
