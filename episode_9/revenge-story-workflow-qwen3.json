@@ -811,25 +811,25 @@
             {
               "id": "48869e0b-b79b-4ff9-8777-ca0b66a4199b",
               "name": "bg_video_url",
-              "value": "={{ [\"https://xfkwoofhjjnbduauwnns.supabase.co/storage/v1/object/public/revenge-stories-assets/bgvideo.mp4\"].randomItem() }}",
+              "value": "={{ [\"\"].randomItem() }}",
               "type": "string"
             },
             {
               "id": "f50ea6b3-78cc-448a-8bc2-551c3d9fc10c",
               "name": "person_female_image_url",
-              "value": "={{ [\"https://xfkwoofhjjnbduauwnns.supabase.co/storage/v1/object/public/revenge-stories-assets/person_female.png\"].randomItem() }}",
+              "value": "={{ [\"\"].randomItem() }}",
               "type": "string"
             },
             {
               "id": "424ad55a-479a-4e96-bd79-20b88e5e44ab",
               "name": "person_male_image_url",
-              "value": "={{ [\"https://xfkwoofhjjnbduauwnns.supabase.co/storage/v1/object/public/revenge-stories-assets/person_male.png\"].randomItem() }}",
+              "value": "={{ [\"\"].randomItem() }}",
               "type": "string"
             },
             {
               "id": "efa00bce-d84c-450a-ae7e-41cbf4ffdda8",
               "name": "server_url",
-              "value": "http://192.168.68.60:8000",
+              "value": "YOUR_SERVER_URL",
               "type": "string"
             },
             {
@@ -1652,7 +1652,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f5d627dc-52eb-4eea-8663-a24c857e0a5a",
+  "versionId": "9b162ebb-5118-408a-93e6-7c6520d88f2e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
