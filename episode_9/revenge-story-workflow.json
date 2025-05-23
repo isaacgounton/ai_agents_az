@@ -1,15 +1,15 @@
 {
-  "name": "Episode 9: Revenge story creator",
+  "name": "Episode 9: Revenge story creator - qwen3",
   "nodes": [
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -220,
-        -3120
+        -240,
+        -1740
       ],
-      "id": "a85a6597-e9a1-445f-b22b-7015402e3a26",
+      "id": "21c47d1c-23cf-4326-b14a-11fabb1c6df2",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -21,9 +21,9 @@
       "typeVersion": 1,
       "position": [
         340,
-        -3120
+        -3100
       ],
-      "id": "7fd00466-4e3f-49fd-92de-1aea0bbac0d5",
+      "id": "165bb080-6533-4fce-9610-41e86a4ee107",
       "name": "Split Out"
     },
     {
@@ -37,14 +37,8 @@
         340,
         -3760
       ],
-      "id": "66f9af13-f6fd-424b-8ae6-55bad8af3348",
-      "name": "Ollama Model",
-      "credentials": {
-        "ollamaApi": {
-          "id": "cWXUsJ0LsqnzOEx0",
-          "name": "Ollama account"
-        }
-      }
+      "id": "07e689c1-8b29-4323-9e55-4ac606829771",
+      "name": "Ollama Model"
     },
     {
       "parameters": {
@@ -53,10 +47,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        920,
-        -3120
+        900,
+        -3100
       ],
-      "id": "78b4ee9b-c229-4a44-ab07-c6de99f77b16",
+      "id": "e4bb05d9-4747-4796-bbd6-88fe80c6e6d0",
       "name": "Loop Over Items"
     },
     {
@@ -88,9 +82,9 @@
       "typeVersion": 2.2,
       "position": [
         600,
-        -3120
+        -3100
       ],
-      "id": "ca658516-8955-4168-a128-8cb2ccec6221",
+      "id": "46e5b3d7-340f-4d7a-9776-7cdba9669c50",
       "name": "Filter"
     },
     {
@@ -124,10 +118,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2900,
-        -2800
+        2880,
+        -2780
       ],
-      "id": "79d9adf8-7533-4091-940c-e8c7fa3a78d8",
+      "id": "977a089b-7498-4627-a120-4a1be3c5cd40",
       "name": "Skip post",
       "credentials": {
         "supabaseApi": {
@@ -167,10 +161,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2580,
-        -2800
+        2560,
+        -2780
       ],
-      "id": "4b153f9b-dc12-412a-8a29-d88ce85333dd",
+      "id": "e77ef569-19e2-4e0b-a141-1bc104accd8d",
       "name": "Save post",
       "credentials": {
         "supabaseApi": {
@@ -181,7 +175,7 @@
     },
     {
       "parameters": {
-        "inputText": "={{ $('Set fields').item.json.title }}\n\n{{ $('Set fields').item.json.content }}",
+        "inputText": "={{ $('Set fields').item.json.title }}\n\n{{ $('Set fields').item.json.content }}\n\n/no_think",
         "categories": {
           "categories": [
             {
@@ -200,10 +194,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1,
       "position": [
-        2100,
-        -3100
+        2080,
+        -3080
       ],
-      "id": "b493e70e-5b81-4c7f-a215-7ee462fe2c16",
+      "id": "6fd407e1-c8c8-4ba8-847e-d6d01d06f952",
       "name": "Is it a story?"
     },
     {
@@ -215,9 +209,9 @@
       "typeVersion": 4.2,
       "position": [
         20,
-        -3120
+        -3100
       ],
-      "id": "5e826a0e-f0ea-4c06-bcc5-daa3dea860df",
+      "id": "ec0f1ffa-2b99-4c3f-8c7c-a5a266a64044",
       "name": "Get stories from Reddit"
     },
     {
@@ -255,10 +249,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1380,
-        -3120
+        1360,
+        -3100
       ],
-      "id": "3684de24-5db0-45f6-92ab-4e51b33a029a",
+      "id": "2685f586-2223-49e5-aaee-ece0ced6911c",
       "name": "Set fields"
     },
     {
@@ -277,10 +271,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        1640,
-        -3120
+        1620,
+        -3100
       ],
-      "id": "7dca3c40-fa2a-4a9c-9cfe-3d8063ae6bd4",
+      "id": "76c6f42b-c82d-4b3f-9496-8541f95cf1d5",
       "name": "Look up the id of the post",
       "alwaysOutputData": true,
       "credentials": {
@@ -317,10 +311,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1860,
-        -3120
+        1840,
+        -3100
       ],
-      "id": "cddbeaf0-646c-4c2b-9994-e23585a4941e",
+      "id": "cf039314-f0cf-4166-88f4-2480d0f8d7d6",
       "name": "Already exists?"
     },
     {
@@ -344,7 +338,7 @@
         920,
         -1740
       ],
-      "id": "451aa784-1e49-42f6-987e-27d62f89f978",
+      "id": "9c0af49b-fd93-4173-afd6-d4f1cac30cb9",
       "name": "Get the next story to process",
       "alwaysOutputData": true,
       "credentials": {
@@ -364,9 +358,9 @@
         460,
         -760
       ],
-      "id": "4197fb12-5181-4b41-94a5-bb9dccb3260d",
+      "id": "6ad08bca-6017-4728-b467-b2acd54bf318",
       "name": "Wait",
-      "webhookId": "6e8a282a-9ef0-4c3d-b4dd-d4ca41366446"
+      "webhookId": "fd80656e-441d-4917-a540-d6db5b19aa9c"
     },
     {
       "parameters": {
@@ -379,7 +373,7 @@
         2040,
         -1080
       ],
-      "id": "a4838968-b3a5-49db-ae56-9cdb18a02931",
+      "id": "f532dbea-227f-4c5c-ac71-e45b887305ed",
       "name": "Download the video",
       "alwaysOutputData": false,
       "retryOnFail": false,
@@ -400,7 +394,7 @@
         2280,
         -1080
       ],
-      "id": "6a73d69b-2d06-4572-bb55-314d48c09641",
+      "id": "98254149-d8d2-4f2c-9e40-02ab4cb3ff24",
       "name": "Share on YouTube",
       "disabled": true
     },
@@ -415,7 +409,7 @@
         680,
         -760
       ],
-      "id": "30a011e7-4dcd-463c-b8cf-2a08824ba188",
+      "id": "2215fe38-c63d-47ee-81cf-0aa5be6fba68",
       "name": "Check video status",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -461,7 +455,7 @@
         20,
         -760
       ],
-      "id": "5b3cfb99-781f-4745-9682-a2ef205fd971",
+      "id": "53bda433-301e-4e2c-8088-4ae6b7eea6bc",
       "name": "Start creating the video"
     },
     {
@@ -552,7 +546,7 @@
         940,
         -760
       ],
-      "id": "5395584d-28d2-470a-b8ac-55ba53bd8c32",
+      "id": "6379ef5f-8cdc-45ed-bbca-43fe38d6ca43",
       "name": "Switch"
     },
     {
@@ -563,7 +557,7 @@
         1500,
         -1060
       ],
-      "id": "64895f22-34bd-4be7-a7a6-cc18d2014ba9",
+      "id": "7e35d746-6337-48d3-8b82-d957ebb1bfc5",
       "name": "No Operation, do nothing"
     },
     {
@@ -573,7 +567,7 @@
             {
               "id": "761be6c7-4a57-4c29-b24b-0e7769515baf",
               "name": "text",
-              "value": "={{ $json.text.split('</think>')[1].trim().replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '') }}",
+              "value": "={{ $json.text.trim().replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '') }}",
               "type": "string"
             }
           ]
@@ -586,7 +580,7 @@
         2140,
         -1740
       ],
-      "id": "56c8bb6c-f100-467f-b44a-f27f85975528",
+      "id": "8067ee1a-c32b-45f8-8357-cd7a33ebb0f9",
       "name": "Cleanup text"
     },
     {
@@ -618,7 +612,7 @@
           ]
         },
         "options": {
-          "systemPromptTemplate": "=You are an expert writer.\nCreate a new, fictionalized character and the back story based on the reddit story.\nDon't use any name or location from the story, create a new ones.\nUse the provided sex for the character.\n\nThe final story wil be written in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language, so make sure the location and the name are authentic for the language."
+          "systemPromptTemplate": "=/no_think\nYou are an expert writer.\nCreate a new, fictionalized character and the back story based on the reddit story.\nDon't use any name or location from the story, create a new ones.\nUse the provided sex for the character.\n\nThe final story wil be written in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language, so make sure the location and the name are authentic for the language."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
@@ -627,7 +621,7 @@
         1440,
         -1740
       ],
-      "id": "0d33f56e-957c-47f7-bbbf-1122c1da83f1",
+      "id": "836bda6c-004a-44cc-b85f-96b1384bced5",
       "name": "Create character"
     },
     {
@@ -659,14 +653,8 @@
         1740,
         -740
       ],
-      "id": "e13beed6-5e8a-4890-aea3-40b9fc21a235",
+      "id": "ac66a420-53c0-4601-85bf-8deb2ca6f0fc",
       "name": "Set status to created",
-      "credentials": {
-        "supabaseApi": {
-          "id": "ITjsOe1zjbHScIWk",
-          "name": "Supabase revange videos"
-        }
-      },
       "disabled": true
     },
     {
@@ -698,14 +686,8 @@
         2580,
         -740
       ],
-      "id": "0acd45ff-340c-4be1-8e9a-e3910789a0bb",
+      "id": "ba2132bd-79ad-46bc-a132-951ab5012838",
       "name": "Set status to uploaded",
-      "credentials": {
-        "supabaseApi": {
-          "id": "ITjsOe1zjbHScIWk",
-          "name": "Supabase revange videos"
-        }
-      },
       "disabled": true
     },
     {
@@ -737,7 +719,7 @@
         1280,
         -1060
       ],
-      "id": "9d064092-54ba-4a51-8c4a-eac40145565a",
+      "id": "7b7b90f3-1c0c-4b2c-be9b-cc06b921a677",
       "name": "Set status to failed",
       "credentials": {
         "supabaseApi": {
@@ -750,7 +732,7 @@
       "parameters": {
         "content": "# Add more stories to the database",
         "height": 940,
-        "width": 3600
+        "width": 3640
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
@@ -758,7 +740,7 @@
         -420,
         -3380
       ],
-      "id": "a973c25f-9151-4924-b581-3fbfa29f00f7",
+      "id": "eaeb482d-e79f-4371-abd0-a21618967a5e",
       "name": "Sticky Note"
     },
     {
@@ -769,7 +751,7 @@
         1480,
         -2060
       ],
-      "id": "d306d19c-124d-4cb4-895f-dfcdf4281021",
+      "id": "fb4448e6-2ea9-4c4a-973b-af39b10a7e2a",
       "name": "No unprocessed stories in the database"
     },
     {
@@ -796,7 +778,7 @@
         3020,
         -1580
       ],
-      "id": "95ea7117-5b8e-4ed8-875d-7dbf217136d6",
+      "id": "afe5e017-3802-4284-b9f7-4e682f0e4ed6",
       "name": "HTTP Request"
     },
     {
@@ -819,7 +801,7 @@
         640,
         -1740
       ],
-      "id": "e93dabb8-e238-4a29-8110-a052ddc1b378",
+      "id": "ec695da1-2415-4e17-8b6b-3ce127d5f152",
       "name": "Setup sex of the main character"
     },
     {
@@ -847,7 +829,7 @@
             {
               "id": "efa00bce-d84c-450a-ae7e-41cbf4ffdda8",
               "name": "server_url",
-              "value": "ADD_YOUR_SERVER_URL",
+              "value": "YOUR_SERVER_URL",
               "type": "string"
             },
             {
@@ -878,7 +860,7 @@
         20,
         -1740
       ],
-      "id": "242c8f06-72f6-48a1-94ac-cc4ec106f39e",
+      "id": "e9d7b68b-ccdc-462e-b16a-112ecc1d9808",
       "name": "Configuration for story writing"
     },
     {
@@ -891,7 +873,7 @@
         360,
         -1740
       ],
-      "id": "7bdf4290-038e-4525-a345-e9ef4b4d4311",
+      "id": "ed3fe871-19a2-4579-ba25-260fb0e9ebb5",
       "name": "Setup language"
     },
     {
@@ -914,7 +896,7 @@
         3720,
         -1580
       ],
-      "id": "6827003c-2716-4948-b13d-2b7a09b49e34",
+      "id": "f8d7b64f-cde4-451d-b2af-b5cc481916b4",
       "name": "Set the final voice"
     },
     {
@@ -948,7 +930,7 @@
         2520,
         -1740
       ],
-      "id": "a444f01a-5236-46f3-9bc3-d1fab10e84e1",
+      "id": "547d60c8-104a-40c1-8ed8-e2070e4f00cf",
       "name": "Is there a pre-selected voice to use?"
     },
     {
@@ -971,7 +953,7 @@
         3100,
         -1860
       ],
-      "id": "1d2570b8-b26c-477c-a62c-885a5ff65794",
+      "id": "dcd326fd-02d2-4f65-91a9-580230c0da57",
       "name": "Keep the original voice value"
     },
     {
@@ -994,7 +976,7 @@
         3200,
         -1580
       ],
-      "id": "21a172d0-0eae-40ac-804e-9055f610c2ad",
+      "id": "137554d6-7f6a-4ebf-903c-a3ddbaa58335",
       "name": "Set a random voice"
     },
     {
@@ -1027,13 +1009,13 @@
         1180,
         -1740
       ],
-      "id": "3d8013e6-08cb-40f1-9ca9-0be9c0a32c3a",
+      "id": "bd812a04-fb51-4af9-8045-8605ce696772",
       "name": "Is there a story to process?"
     },
     {
       "parameters": {
         "promptType": "define",
-        "text": "=I'm creating a revenge story video from revenge stories shared on Reddit. Your task is take the input, enhance it and create an engaging, fictionalized revenge story from it.\n\n<instructions>\n1. Use the plot structure below to create the story\n2. Use the provided character name, age, sex and location. Make sure to customize the story so it fits the sex of the character.\n3. The story should be told in first person\n4. Make the reading level 8th grade\n5. Don't use acronyms, use the long version of every turn. The text will be used turned into speech with TTS.\n6. Don't create paragraphs, don't format the text, use clear and continous text\n7. The story should be very long\n8. Write the story in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language. Make sure it sounds authentic.\n\nPlot structure\n\n- **Act 1: The character is in a situation with a problem.**\n    - Introduce the character, their world, and their place in it. What is interesting or intriguing about this character and their life? Describe any distinctive qualities, and create empathy with them.\n    - Something happens to shake the character’s world, or they find themselves in a new situation, creating a threat or opportunity. What problem does the character have to solve? How is the character unsatisfied with how things currently are? Who has appeared as their nemesis?\n- **Act 2: They try to solve the problem, but fail, making it worse.**\n    - Character begins to make efforts to solve their problem. They face a series of hurdles or conflicts, each of increasing difficulty and stakes. Some they win, some they lose. The original problem begins to grow bigger and more serious.\n    - In order for the high of the climax to have the greatest effect, take the character as low as they can go. Despite all the progress they’ve made against external and internal obstacles, something should happen which makes them certain that all may be lost.\n- **Act 3: They make a final attempt to solve the problem, which may succeed or fail. The consequence is not always as expected.**\n    - Bring to a climax. The character makes a final, last ditch effort to solve their problem. They must dig deep to find that last bit of strength and courage, and risk everything they have to make one final attempt. May involve a confrontation between the character and their nemesis.\n    - Depending on the type of story being written, this effort can solve the problem or destroy everything. The consequences of their choice must be poetic. In vast majority of cases, the character is rewarded for their action or decision and be fulfilled.\n    - Bring to a resolution. Show the character’s new normal, how they may have changed, and tie up any loose ends. As close to the end as possible, there could be an unexpected twist to leave a parting thrill.\n</instructions>\n\n<character>\n<name>{{ $json.output.name }}</name>\n<age>{{ $json.output.age }}</age>\n<location>{{ $json.output.location }}</location>\n<sex>{{ $json.output.sex }}</sex>\n</character>\n\n<reddit_revenge_story>\n<title>{{ $('Get the next story to process').item.json.title }}</title>\n<content>\n{{ $('Get the next story to process').item.json.content }}\n</content>\n</reddit_revenge_story>",
+        "text": "=I'm creating a revenge story video from revenge stories shared on Reddit. Your task is take the input, enhance it and create an engaging, fictionalized revenge story from it.\n\n<instructions>\n1. Use the plot structure below to create the story\n2. Use the provided character name, age, sex and location. Make sure to customize the story so it fits the sex of the character.\n3. The story should be told in first person\n4. Make the reading level 8th grade\n5. Don't use acronyms, use the long version of every turn. The text will be used turned into speech with TTS.\n6. Don't create paragraphs, don't format the text, use clear and continous text\n7. The story should be very long\n8. Write the story in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language. Make sure it sounds authentic.\n\nPlot structure\n\n- **Act 1: The character is in a situation with a problem.**\n    - Introduce the character, their world, and their place in it. What is interesting or intriguing about this character and their life? Describe any distinctive qualities, and create empathy with them.\n    - Something happens to shake the character’s world, or they find themselves in a new situation, creating a threat or opportunity. What problem does the character have to solve? How is the character unsatisfied with how things currently are? Who has appeared as their nemesis?\n- **Act 2: They try to solve the problem, but fail, making it worse.**\n    - Character begins to make efforts to solve their problem. They face a series of hurdles or conflicts, each of increasing difficulty and stakes. Some they win, some they lose. The original problem begins to grow bigger and more serious.\n    - In order for the high of the climax to have the greatest effect, take the character as low as they can go. Despite all the progress they’ve made against external and internal obstacles, something should happen which makes them certain that all may be lost.\n- **Act 3: They make a final attempt to solve the problem, which may succeed or fail. The consequence is not always as expected.**\n    - Bring to a climax. The character makes a final, last ditch effort to solve their problem. They must dig deep to find that last bit of strength and courage, and risk everything they have to make one final attempt. May involve a confrontation between the character and their nemesis.\n    - Depending on the type of story being written, this effort can solve the problem or destroy everything. The consequences of their choice must be poetic. In vast majority of cases, the character is rewarded for their action or decision and be fulfilled.\n    - Bring to a resolution. Show the character’s new normal, how they may have changed, and tie up any loose ends. As close to the end as possible, there could be an unexpected twist to leave a parting thrill.\n</instructions>\n\n<character>\n<name>{{ $json.output.name }}</name>\n<age>{{ $json.output.age }}</age>\n<location>{{ $json.output.location }}</location>\n<sex>{{ $json.output.sex }}</sex>\n</character>\n\n<reddit_revenge_story>\n<title>{{ $('Get the next story to process').item.json.title }}</title>\n<content>\n{{ $('Get the next story to process').item.json.content }}\n</content>\n</reddit_revenge_story>\n\n/no_think",
         "messages": {
           "messageValues": [
             {
@@ -1048,7 +1030,7 @@
         1780,
         -1740
       ],
-      "id": "d29267f6-65cd-49b3-a406-5e8fe3343ee4",
+      "id": "3721b863-9b76-4abe-a9bb-4bffcf44c4dd",
       "name": "Write the story"
     },
     {
@@ -1071,7 +1053,7 @@
         1480,
         -740
       ],
-      "id": "5415ef3b-c896-4cbb-a739-78511abbca87",
+      "id": "86da44d2-b067-4a87-a544-1b7cc57996dc",
       "name": "Setup the download url"
     },
     {
@@ -1087,7 +1069,7 @@
         -420,
         -4120
       ],
-      "id": "0c179610-cef6-4f59-a204-b5fd349bb1a4",
+      "id": "2bf98c92-5626-49b4-9ad8-4391d69a4d5c",
       "name": "Sticky Note1"
     },
     {
@@ -1100,7 +1082,7 @@
         -140,
         -3940
       ],
-      "id": "73ff609c-f2fc-4937-aa0e-feb47d4daa2e",
+      "id": "6fdb70f1-0c78-445a-917e-afc4367c1be8",
       "name": "OpenRouter Chat Model"
     },
     {
@@ -1113,7 +1095,7 @@
         20,
         -3760
       ],
-      "id": "96902f9a-3c7b-40a4-9540-8249c19fff86",
+      "id": "0432b123-0a82-4327-ae33-cb9d0e48612d",
       "name": "Google Gemini Chat Model"
     },
     {
@@ -1131,14 +1113,8 @@
         -320,
         -3940
       ],
-      "id": "65e2fbe6-b007-4717-9b76-bee0c513f545",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "tGvJRP2th9CbI2oq",
-          "name": "OpenAi account 2"
-        }
-      }
+      "id": "d39fb3fe-0929-4d56-a63b-dcfcb7ed8c43",
+      "name": "OpenAI Chat Model"
     },
     {
       "parameters": {
@@ -1150,7 +1126,7 @@
         -320,
         -3760
       ],
-      "id": "0b04564a-b228-4c34-aece-3ddfe3a2331b",
+      "id": "7a48048c-3e0f-44a6-9647-57eb1687d953",
       "name": "Azure OpenAI Chat Model"
     },
     {
@@ -1163,7 +1139,7 @@
         -140,
         -3760
       ],
-      "id": "d9b0d547-8544-4bf9-916b-7371a9de715f",
+      "id": "2c268109-4b4c-4c8d-aff9-7ffc40e65466",
       "name": "xAI Grok Chat Model"
     },
     {
@@ -1179,7 +1155,7 @@
         -420,
         -2300
       ],
-      "id": "caf8d1fb-cab3-41fc-8051-9c7dd26af071",
+      "id": "6df16155-6857-4ebd-bfc8-e4c10601b859",
       "name": "Sticky Note2"
     },
     {
@@ -1195,7 +1171,7 @@
         -40,
         -1900
       ],
-      "id": "d7555f8e-9199-4e7c-b412-27e29a63aedd",
+      "id": "c04c05a9-4365-4bc2-873e-74308385acbb",
       "name": "Sticky Note3"
     },
     {
@@ -1207,10 +1183,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        720,
+        680,
         -4100
       ],
-      "id": "52bb677f-73ae-4540-9edd-eb9fd4dcc724",
+      "id": "426c6df3-afe7-4b1a-b5c3-64cdcbf01207",
       "name": "Sticky Note4"
     },
     {
@@ -1223,10 +1199,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1180,
-        -2740
+        -1160,
+        -2820
       ],
-      "id": "59fdc886-f8a5-4938-9da1-73bd548aa3d7",
+      "id": "4da2c723-390c-4aa2-a451-32960b6c2de8",
       "name": "Sticky Note5"
     }
   ],
@@ -1236,7 +1212,7 @@
       "main": [
         [
           {
-            "node": "Get stories from Reddit",
+            "node": "Configuration for story writing",
             "type": "main",
             "index": 0
           }
@@ -1676,11 +1652,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "59a9545b-41fa-4ed3-8872-521679b37f13",
+  "versionId": "20c2e6b6-b1f5-49b0-aad3-9666c230e163",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "2yetvBGqqsH9DQLB",
+  "id": "9eBmwaOwz2bkEgZV",
   "tags": []
 }
