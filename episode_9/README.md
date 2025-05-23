@@ -2,8 +2,8 @@
 
 ## Free n8n JSON workflow
 
-- [Revenge story videos workflows for n8n](revenge-story-workflow.json)
-- [Revenge story videos workflows for n8n (ollama qwen3)](revenge-story-workflow-qwen3.json)
+- [Revenge story videos workflows for n8n - any LLM](revenge-story-workflow.json)
+- [Revenge story videos workflows for n8n (!ONLY for ollama qwen3)](revenge-story-workflow-qwen3.json)
 
 ## Guides for the workflow
 
