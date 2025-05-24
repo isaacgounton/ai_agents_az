@@ -14,6 +14,7 @@ In this repo, you can find the n8n templates we created for the episodes of [AI 
 - [Episode 8: Creating an AI influencer on Instagram using n8n](episode_8)
 - [Episode 9: Create revenge story videos for YouTube](episode_9)
 
-## MCP servers
+## servers
 
-- [Short video maker](https://github.com/gyoridavid/short-video-maker)
+- [Short video maker MCP/REST server](https://github.com/gyoridavid/short-video-maker)
+- [Narrated story creator REST/MCP server](https://hub.docker.com/r/gyoridavid/narrated-story-creator)
