@@ -1,15 +1,15 @@
 {
-  "name": "Episode 9: Revenge story creator",
+  "name": "Episode 9: Revenge story creator 2",
   "nodes": [
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -220,
-        -3120
+        -240,
+        -1740
       ],
-      "id": "a85a6597-e9a1-445f-b22b-7015402e3a26",
+      "id": "53c669c5-d85b-4252-a2dd-c7bf84680831",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -21,9 +21,9 @@
       "typeVersion": 1,
       "position": [
         340,
-        -3120
+        -3100
       ],
-      "id": "7fd00466-4e3f-49fd-92de-1aea0bbac0d5",
+      "id": "e02f1176-711c-44d1-9138-b3fad9e884a0",
       "name": "Split Out"
     },
     {
@@ -37,7 +37,7 @@
         340,
         -3760
       ],
-      "id": "66f9af13-f6fd-424b-8ae6-55bad8af3348",
+      "id": "4debe0e4-8eb2-41ef-a7e7-b216062c2478",
       "name": "Ollama Model",
       "credentials": {
         "ollamaApi": {
@@ -53,10 +53,10 @@
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        920,
-        -3120
+        900,
+        -3100
       ],
-      "id": "78b4ee9b-c229-4a44-ab07-c6de99f77b16",
+      "id": "a8b7f961-9b76-4d2d-9847-e8fdc993d95d",
       "name": "Loop Over Items"
     },
     {
@@ -88,9 +88,9 @@
       "typeVersion": 2.2,
       "position": [
         600,
-        -3120
+        -3100
       ],
-      "id": "ca658516-8955-4168-a128-8cb2ccec6221",
+      "id": "8407cc8c-8dca-4f16-b790-46a941b32e8e",
       "name": "Filter"
     },
     {
@@ -124,10 +124,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2900,
-        -2800
+        2880,
+        -2780
       ],
-      "id": "79d9adf8-7533-4091-940c-e8c7fa3a78d8",
+      "id": "1563fd09-6647-470b-8fa8-7a7672eccee0",
       "name": "Skip post",
       "credentials": {
         "supabaseApi": {
@@ -167,10 +167,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2580,
-        -2800
+        2560,
+        -2780
       ],
-      "id": "4b153f9b-dc12-412a-8a29-d88ce85333dd",
+      "id": "1a594090-55f7-40de-af92-1785631ab7bb",
       "name": "Save post",
       "credentials": {
         "supabaseApi": {
@@ -200,10 +200,10 @@
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1,
       "position": [
-        2100,
-        -3100
+        2080,
+        -3080
       ],
-      "id": "b493e70e-5b81-4c7f-a215-7ee462fe2c16",
+      "id": "efd6d869-e1d9-475e-a674-e01a818aeacd",
       "name": "Is it a story?"
     },
     {
@@ -215,9 +215,9 @@
       "typeVersion": 4.2,
       "position": [
         20,
-        -3120
+        -3100
       ],
-      "id": "5e826a0e-f0ea-4c06-bcc5-daa3dea860df",
+      "id": "91dea14a-1058-4f89-b4f5-49e0e73a6801",
       "name": "Get stories from Reddit"
     },
     {
@@ -255,10 +255,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1380,
-        -3120
+        1360,
+        -3100
       ],
-      "id": "3684de24-5db0-45f6-92ab-4e51b33a029a",
+      "id": "68ac32ab-8e6c-44c4-8a2b-fab2e9913b42",
       "name": "Set fields"
     },
     {
@@ -277,10 +277,10 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        1640,
-        -3120
+        1620,
+        -3100
       ],
-      "id": "7dca3c40-fa2a-4a9c-9cfe-3d8063ae6bd4",
+      "id": "35cfadeb-a851-44d2-b2c4-a7fbc58f4b93",
       "name": "Look up the id of the post",
       "alwaysOutputData": true,
       "credentials": {
@@ -317,10 +317,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1860,
-        -3120
+        1840,
+        -3100
       ],
-      "id": "cddbeaf0-646c-4c2b-9994-e23585a4941e",
+      "id": "b996cc2e-eefa-45ea-8275-b0939c1fa4e8",
       "name": "Already exists?"
     },
     {
@@ -344,7 +344,7 @@
         920,
         -1740
       ],
-      "id": "451aa784-1e49-42f6-987e-27d62f89f978",
+      "id": "2eeb9e63-f01e-4ec8-8cda-8a2bb32739d9",
       "name": "Get the next story to process",
       "alwaysOutputData": true,
       "credentials": {
@@ -364,9 +364,9 @@
         460,
         -760
       ],
-      "id": "4197fb12-5181-4b41-94a5-bb9dccb3260d",
+      "id": "646deb58-6cc6-40f9-a76b-3ce9c27b3058",
       "name": "Wait",
-      "webhookId": "6e8a282a-9ef0-4c3d-b4dd-d4ca41366446"
+      "webhookId": "f7cb7ba8-fae0-41f1-8ee6-6313c48d04c4"
     },
     {
       "parameters": {
@@ -376,20 +376,19 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        2040,
+        2260,
         -1080
       ],
-      "id": "a4838968-b3a5-49db-ae56-9cdb18a02931",
+      "id": "667def5a-dc11-4a57-9000-46f1824dddca",
       "name": "Download the video",
       "alwaysOutputData": false,
-      "retryOnFail": false,
-      "disabled": true
+      "retryOnFail": false
     },
     {
       "parameters": {
         "resource": "video",
         "operation": "upload",
-        "title": "={{ $('Generate video').item.json.output.videoTitle }}",
+        "title": "={{ $('Cleanup title').item.json.title }}",
         "regionCode": "HU",
         "categoryId": "24",
         "options": {}
@@ -397,12 +396,17 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        2280,
+        2720,
         -1080
       ],
-      "id": "6a73d69b-2d06-4572-bb55-314d48c09641",
+      "id": "7e11ac67-91e0-4a13-bcc8-8837addaf160",
       "name": "Share on YouTube",
-      "disabled": true
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "EvIEz3KvgFMPW9Ap",
+          "name": "YouTube account"
+        }
+      }
     },
     {
       "parameters": {
@@ -415,7 +419,7 @@
         680,
         -760
       ],
-      "id": "30a011e7-4dcd-463c-b8cf-2a08824ba188",
+      "id": "02d0225e-fdaf-43ac-b8f7-b016e1697847",
       "name": "Check video status",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -461,7 +465,7 @@
         20,
         -760
       ],
-      "id": "5b3cfb99-781f-4745-9682-a2ef205fd971",
+      "id": "0facd03d-1798-405e-a270-3b61289067fc",
       "name": "Start creating the video"
     },
     {
@@ -552,7 +556,7 @@
         940,
         -760
       ],
-      "id": "5395584d-28d2-470a-b8ac-55ba53bd8c32",
+      "id": "3b213ca9-1584-4f23-97ab-90d507774e78",
       "name": "Switch"
     },
     {
@@ -563,7 +567,7 @@
         1500,
         -1060
       ],
-      "id": "64895f22-34bd-4be7-a7a6-cc18d2014ba9",
+      "id": "3e13268d-d04e-4ade-91cd-f8810bd38a48",
       "name": "No Operation, do nothing"
     },
     {
@@ -573,7 +577,7 @@
             {
               "id": "761be6c7-4a57-4c29-b24b-0e7769515baf",
               "name": "text",
-              "value": "={{ $json.text.trim().replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '') }}",
+              "value": "={{ $json.text.replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '').trim() }}",
               "type": "string"
             }
           ]
@@ -586,7 +590,7 @@
         2140,
         -1740
       ],
-      "id": "56c8bb6c-f100-467f-b44a-f27f85975528",
+      "id": "28062ee4-2e06-4609-92bf-6940650e30de",
       "name": "Cleanup text"
     },
     {
@@ -627,7 +631,7 @@
         1440,
         -1740
       ],
-      "id": "0d33f56e-957c-47f7-bbbf-1122c1da83f1",
+      "id": "c26b45b7-1adf-46a7-b5c7-8af6211390f9",
       "name": "Create character"
     },
     {
@@ -659,15 +663,14 @@
         1740,
         -740
       ],
-      "id": "e13beed6-5e8a-4890-aea3-40b9fc21a235",
+      "id": "f8905eb1-4417-4644-8676-39d23cdc645c",
       "name": "Set status to created",
       "credentials": {
         "supabaseApi": {
           "id": "ITjsOe1zjbHScIWk",
           "name": "Supabase revange videos"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -695,18 +698,17 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2580,
+        3020,
         -740
       ],
-      "id": "0acd45ff-340c-4be1-8e9a-e3910789a0bb",
+      "id": "64e2703d-fcea-4733-8276-580e63df08ac",
       "name": "Set status to uploaded",
       "credentials": {
         "supabaseApi": {
           "id": "ITjsOe1zjbHScIWk",
           "name": "Supabase revange videos"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -737,7 +739,7 @@
         1280,
         -1060
       ],
-      "id": "9d064092-54ba-4a51-8c4a-eac40145565a",
+      "id": "b6b68753-1a7c-4329-90be-c8674fcf91f7",
       "name": "Set status to failed",
       "credentials": {
         "supabaseApi": {
@@ -750,7 +752,7 @@
       "parameters": {
         "content": "# Add more stories to the database",
         "height": 940,
-        "width": 3600
+        "width": 3640
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
@@ -758,7 +760,7 @@
         -420,
         -3380
       ],
-      "id": "a973c25f-9151-4924-b581-3fbfa29f00f7",
+      "id": "b989335e-78d8-4d7d-acfc-db9bea70910f",
       "name": "Sticky Note"
     },
     {
@@ -769,7 +771,7 @@
         1480,
         -2060
       ],
-      "id": "d306d19c-124d-4cb4-895f-dfcdf4281021",
+      "id": "f0e676b5-0cc2-4604-800b-d6edafb1d6a9",
       "name": "No unprocessed stories in the database"
     },
     {
@@ -793,10 +795,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        3020,
+        3260,
         -1580
       ],
-      "id": "95ea7117-5b8e-4ed8-875d-7dbf217136d6",
+      "id": "2279ea5f-d97a-470c-a91d-480dfa54cbba",
       "name": "HTTP Request"
     },
     {
@@ -819,7 +821,7 @@
         640,
         -1740
       ],
-      "id": "e93dabb8-e238-4a29-8110-a052ddc1b378",
+      "id": "44bd9195-a6d8-4c76-b2df-02bb39f623c5",
       "name": "Setup sex of the main character"
     },
     {
@@ -847,13 +849,13 @@
             {
               "id": "efa00bce-d84c-450a-ae7e-41cbf4ffdda8",
               "name": "server_url",
-              "value": "ADD_YOUR_SERVER_URL",
+              "value": "YOUR_SERVER_URL",
               "type": "string"
             },
             {
               "id": "5b5a9281-1de3-429e-aaf3-8da03a38b979",
               "name": "lang_code",
-              "value": "en-gb",
+              "value": "en-us",
               "type": "string"
             },
             {
@@ -878,7 +880,7 @@
         20,
         -1740
       ],
-      "id": "242c8f06-72f6-48a1-94ac-cc4ec106f39e",
+      "id": "13eedf3b-9702-4690-b631-828c7478563f",
       "name": "Configuration for story writing"
     },
     {
@@ -891,7 +893,7 @@
         360,
         -1740
       ],
-      "id": "7bdf4290-038e-4525-a345-e9ef4b4d4311",
+      "id": "edebb0b2-f25b-4f85-a39a-a8cb20466b77",
       "name": "Setup language"
     },
     {
@@ -911,10 +913,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3720,
+        3760,
         -1580
       ],
-      "id": "6827003c-2716-4948-b13d-2b7a09b49e34",
+      "id": "4a9a196d-f0f0-415e-a25a-0a9ab85b6379",
       "name": "Set the final voice"
     },
     {
@@ -945,10 +947,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2520,
+        2880,
         -1740
       ],
-      "id": "a444f01a-5236-46f3-9bc3-d1fab10e84e1",
+      "id": "e5252ddf-3fa5-4588-b8c6-030ff89c7097",
       "name": "Is there a pre-selected voice to use?"
     },
     {
@@ -968,10 +970,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3100,
+        3340,
         -1860
       ],
-      "id": "1d2570b8-b26c-477c-a62c-885a5ff65794",
+      "id": "0212e5ae-6e6f-463c-a544-70a14caec462",
       "name": "Keep the original voice value"
     },
     {
@@ -991,10 +993,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3200,
+        3440,
         -1580
       ],
-      "id": "21a172d0-0eae-40ac-804e-9055f610c2ad",
+      "id": "611fdd64-a7c3-4eb4-b068-096dd8f226df",
       "name": "Set a random voice"
     },
     {
@@ -1027,7 +1029,7 @@
         1180,
         -1740
       ],
-      "id": "3d8013e6-08cb-40f1-9ca9-0be9c0a32c3a",
+      "id": "533ff614-5db7-4258-a763-c61bfe395cf0",
       "name": "Is there a story to process?"
     },
     {
@@ -1048,7 +1050,7 @@
         1780,
         -1740
       ],
-      "id": "d29267f6-65cd-49b3-a406-5e8fe3343ee4",
+      "id": "da8fcb1c-5ac9-4b1a-b135-7c141cc8b855",
       "name": "Write the story"
     },
     {
@@ -1071,7 +1073,7 @@
         1480,
         -740
       ],
-      "id": "5415ef3b-c896-4cbb-a739-78511abbca87",
+      "id": "529a6c6f-0183-43ce-9ab6-ca1c808d808a",
       "name": "Setup the download url"
     },
     {
@@ -1087,7 +1089,7 @@
         -420,
         -4120
       ],
-      "id": "0c179610-cef6-4f59-a204-b5fd349bb1a4",
+      "id": "b184a26e-2a26-41e8-8726-41a9de7beff7",
       "name": "Sticky Note1"
     },
     {
@@ -1100,7 +1102,7 @@
         -140,
         -3940
       ],
-      "id": "73ff609c-f2fc-4937-aa0e-feb47d4daa2e",
+      "id": "af8f8351-76a6-4cd5-bc63-95170882933b",
       "name": "OpenRouter Chat Model"
     },
     {
@@ -1113,7 +1115,7 @@
         20,
         -3760
       ],
-      "id": "96902f9a-3c7b-40a4-9540-8249c19fff86",
+      "id": "dc42f68f-edf1-4c1d-b190-def1ca83df9c",
       "name": "Google Gemini Chat Model"
     },
     {
@@ -1131,14 +1133,8 @@
         -320,
         -3940
       ],
-      "id": "65e2fbe6-b007-4717-9b76-bee0c513f545",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "tGvJRP2th9CbI2oq",
-          "name": "OpenAi account 2"
-        }
-      }
+      "id": "d7ed9581-131e-4e43-ad83-3efbd77dcdbc",
+      "name": "OpenAI Chat Model"
     },
     {
       "parameters": {
@@ -1150,7 +1146,7 @@
         -320,
         -3760
       ],
-      "id": "0b04564a-b228-4c34-aece-3ddfe3a2331b",
+      "id": "b75384d1-e5d2-4462-addd-b95248b19cee",
       "name": "Azure OpenAI Chat Model"
     },
     {
@@ -1163,14 +1159,14 @@
         -140,
         -3760
       ],
-      "id": "d9b0d547-8544-4bf9-916b-7371a9de715f",
+      "id": "cec973c7-090e-4267-b9c5-c0fad859b19e",
       "name": "xAI Grok Chat Model"
     },
     {
       "parameters": {
         "content": "# Create a story, generate a video and upload to YouTube",
         "height": 1880,
-        "width": 4420,
+        "width": 4440,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -1179,7 +1175,7 @@
         -420,
         -2300
       ],
-      "id": "caf8d1fb-cab3-41fc-8051-9c7dd26af071",
+      "id": "93ebc2e0-e4f5-4951-b4a9-05d9fe2f8a9b",
       "name": "Sticky Note2"
     },
     {
@@ -1195,7 +1191,7 @@
         -40,
         -1900
       ],
-      "id": "d7555f8e-9199-4e7c-b412-27e29a63aedd",
+      "id": "0fba4f6a-37c4-4795-94b8-8a327f41d95c",
       "name": "Sticky Note3"
     },
     {
@@ -1207,15 +1203,15 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        720,
+        680,
         -4100
       ],
-      "id": "52bb677f-73ae-4540-9edd-eb9fd4dcc724",
+      "id": "b7ccf28b-57ca-4ab0-a094-0a5087b06cbb",
       "name": "Sticky Note4"
     },
     {
       "parameters": {
-        "content": "# 1. Make sure to add a trigger node to both of the workflows\n\n# 2. Feel free to separate these workflows\n",
+        "content": "# 1. Make sure to add a trigger node to both of the workflows\n\n# 2. Feel free to separate these workflows\n\n# 3. Make sure the background video is 1920x1080",
         "height": 800,
         "width": 640,
         "color": 5
@@ -1224,10 +1220,47 @@
       "typeVersion": 1,
       "position": [
         -1180,
-        -2740
+        -2820
       ],
-      "id": "59fdc886-f8a5-4938-9da1-73bd548aa3d7",
+      "id": "eb47f2db-0dd7-4303-bdcd-a04aeaa9e62f",
       "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<Instructions>\nCreate an attention-grabbing title, that is consise and descriptive for the following story in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language. The title should be maximum 100 characters.\n</Instructions>\n\n<Story>\n{{ $json.text }}\n</Story>"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        2320,
+        -1740
+      ],
+      "id": "a8023d4d-0002-4fae-8f9d-5bbbc5c7c968",
+      "name": "Create title"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5528f120-1fb8-4ef0-9357-f206ee8c4afe",
+              "name": "title",
+              "value": "={{ $json.text.replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '').trim() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2680,
+        -1740
+      ],
+      "id": "5db9d0b9-02a3-4b16-af96-9a99db4378b5",
+      "name": "Cleanup title"
     }
   ],
   "pinData": {},
@@ -1236,7 +1269,7 @@
       "main": [
         [
           {
-            "node": "Get stories from Reddit",
+            "node": "Configuration for story writing",
             "type": "main",
             "index": 0
           }
@@ -1269,6 +1302,11 @@
           },
           {
             "node": "Create character",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Create title",
             "type": "ai_languageModel",
             "index": 0
           }
@@ -1480,7 +1518,7 @@
       "main": [
         [
           {
-            "node": "Is there a pre-selected voice to use?",
+            "node": "Create title",
             "type": "main",
             "index": 0
           }
@@ -1670,17 +1708,39 @@
           }
         ]
       ]
+    },
+    "Create title": {
+      "main": [
+        [
+          {
+            "node": "Cleanup title",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cleanup title": {
+      "main": [
+        [
+          {
+            "node": "Is there a pre-selected voice to use?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "fee10e1c-db8c-45ec-945d-38248a90341e",
+  "versionId": "12c64860-5f84-4fc7-9ff7-bd48b5a68bc5",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "2yetvBGqqsH9DQLB",
+  "id": "FPpFkTG9ia6gOgd4",
   "tags": []
 }

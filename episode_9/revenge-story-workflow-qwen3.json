@@ -1,5 +1,5 @@
 {
-  "name": "Episode 9: Revenge story creator - qwen3",
+  "name": "Episode 9: Revenge story creator - qwen3 local",
   "nodes": [
     {
       "parameters": {},
@@ -9,7 +9,7 @@
         -240,
         -1740
       ],
-      "id": "21c47d1c-23cf-4326-b14a-11fabb1c6df2",
+      "id": "ce3922f9-4bd9-48f5-8f38-7805bf241510",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -23,7 +23,7 @@
         340,
         -3100
       ],
-      "id": "165bb080-6533-4fce-9610-41e86a4ee107",
+      "id": "ec43a198-a4fd-4e8e-baee-3941491a8922",
       "name": "Split Out"
     },
     {
@@ -37,8 +37,14 @@
         340,
         -3760
       ],
-      "id": "07e689c1-8b29-4323-9e55-4ac606829771",
-      "name": "Ollama Model"
+      "id": "992d8877-3293-4800-9d89-b69c042f7893",
+      "name": "Ollama Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "cWXUsJ0LsqnzOEx0",
+          "name": "Ollama account"
+        }
+      }
     },
     {
       "parameters": {
@@ -50,7 +56,7 @@
         900,
         -3100
       ],
-      "id": "e4bb05d9-4747-4796-bbd6-88fe80c6e6d0",
+      "id": "fef07916-87c6-4817-a4d0-3c18400c99bc",
       "name": "Loop Over Items"
     },
     {
@@ -84,7 +90,7 @@
         600,
         -3100
       ],
-      "id": "46e5b3d7-340f-4d7a-9776-7cdba9669c50",
+      "id": "f5e62731-a499-45f1-b1fa-351533fa2058",
       "name": "Filter"
     },
     {
@@ -121,7 +127,7 @@
         2880,
         -2780
       ],
-      "id": "977a089b-7498-4627-a120-4a1be3c5cd40",
+      "id": "4a3db96d-3d3d-479f-913b-1cd37976c06a",
       "name": "Skip post",
       "credentials": {
         "supabaseApi": {
@@ -164,7 +170,7 @@
         2560,
         -2780
       ],
-      "id": "e77ef569-19e2-4e0b-a141-1bc104accd8d",
+      "id": "fa826813-b43d-4eb1-896d-df290c71680b",
       "name": "Save post",
       "credentials": {
         "supabaseApi": {
@@ -197,7 +203,7 @@
         2080,
         -3080
       ],
-      "id": "6fd407e1-c8c8-4ba8-847e-d6d01d06f952",
+      "id": "5b8a7295-ba36-496b-b595-4dc4d4bcab85",
       "name": "Is it a story?"
     },
     {
@@ -211,7 +217,7 @@
         20,
         -3100
       ],
-      "id": "ec0f1ffa-2b99-4c3f-8c7c-a5a266a64044",
+      "id": "fc58694d-a513-434d-8bcf-e2ea9cd1a1b7",
       "name": "Get stories from Reddit"
     },
     {
@@ -252,7 +258,7 @@
         1360,
         -3100
       ],
-      "id": "2685f586-2223-49e5-aaee-ece0ced6911c",
+      "id": "61aeb28c-7f9b-4386-8661-a2346fe287d8",
       "name": "Set fields"
     },
     {
@@ -274,7 +280,7 @@
         1620,
         -3100
       ],
-      "id": "76c6f42b-c82d-4b3f-9496-8541f95cf1d5",
+      "id": "3b395307-f440-4caf-bb76-409b4b778811",
       "name": "Look up the id of the post",
       "alwaysOutputData": true,
       "credentials": {
@@ -314,7 +320,7 @@
         1840,
         -3100
       ],
-      "id": "cf039314-f0cf-4166-88f4-2480d0f8d7d6",
+      "id": "27793712-6ba4-4309-a593-f38c1cddba5a",
       "name": "Already exists?"
     },
     {
@@ -338,7 +344,7 @@
         920,
         -1740
       ],
-      "id": "9c0af49b-fd93-4173-afd6-d4f1cac30cb9",
+      "id": "a8ef67fa-3f2e-465b-85dd-8e1dee1f28d1",
       "name": "Get the next story to process",
       "alwaysOutputData": true,
       "credentials": {
@@ -358,9 +364,9 @@
         460,
         -760
       ],
-      "id": "6ad08bca-6017-4728-b467-b2acd54bf318",
+      "id": "7f4f2656-a41c-49e9-80fb-068f897e860d",
       "name": "Wait",
-      "webhookId": "fd80656e-441d-4917-a540-d6db5b19aa9c"
+      "webhookId": "ba65a25e-21d4-4f4f-8aab-93adf607bfc7"
     },
     {
       "parameters": {
@@ -370,20 +376,19 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        2040,
+        2260,
         -1080
       ],
-      "id": "f532dbea-227f-4c5c-ac71-e45b887305ed",
+      "id": "7dfcb8cb-7920-4453-8c5b-4554464e8fce",
       "name": "Download the video",
       "alwaysOutputData": false,
-      "retryOnFail": false,
-      "disabled": true
+      "retryOnFail": false
     },
     {
       "parameters": {
         "resource": "video",
         "operation": "upload",
-        "title": "={{ $('Generate video').item.json.output.videoTitle }}",
+        "title": "={{ $('Cleanup title').item.json.title }}",
         "regionCode": "HU",
         "categoryId": "24",
         "options": {}
@@ -391,12 +396,17 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        2280,
+        2720,
         -1080
       ],
-      "id": "98254149-d8d2-4f2c-9e40-02ab4cb3ff24",
+      "id": "e3bdbca3-6185-4b71-b2aa-a5985321b790",
       "name": "Share on YouTube",
-      "disabled": true
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "EvIEz3KvgFMPW9Ap",
+          "name": "YouTube account"
+        }
+      }
     },
     {
       "parameters": {
@@ -409,7 +419,7 @@
         680,
         -760
       ],
-      "id": "2215fe38-c63d-47ee-81cf-0aa5be6fba68",
+      "id": "6f879041-10df-48b0-8a24-128ed615378d",
       "name": "Check video status",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -455,7 +465,7 @@
         20,
         -760
       ],
-      "id": "53bda433-301e-4e2c-8088-4ae6b7eea6bc",
+      "id": "16642184-0651-48ee-8391-6b3fdcd7e0d3",
       "name": "Start creating the video"
     },
     {
@@ -546,7 +556,7 @@
         940,
         -760
       ],
-      "id": "6379ef5f-8cdc-45ed-bbca-43fe38d6ca43",
+      "id": "61dc93c5-0ebd-48b8-abc1-dca206577cbf",
       "name": "Switch"
     },
     {
@@ -557,7 +567,7 @@
         1500,
         -1060
       ],
-      "id": "7e35d746-6337-48d3-8b82-d957ebb1bfc5",
+      "id": "19197a23-5deb-4f73-a0cb-73e224116f3c",
       "name": "No Operation, do nothing"
     },
     {
@@ -580,7 +590,7 @@
         2140,
         -1740
       ],
-      "id": "8067ee1a-c32b-45f8-8357-cd7a33ebb0f9",
+      "id": "87b8bed4-7f21-44cb-8b04-e9bd19a55c6a",
       "name": "Cleanup text"
     },
     {
@@ -621,7 +631,7 @@
         1440,
         -1740
       ],
-      "id": "836bda6c-004a-44cc-b85f-96b1384bced5",
+      "id": "ba65b807-ab8d-4fa8-834f-503e90c9f9e4",
       "name": "Create character"
     },
     {
@@ -653,9 +663,8 @@
         1740,
         -740
       ],
-      "id": "ac66a420-53c0-4601-85bf-8deb2ca6f0fc",
-      "name": "Set status to created",
-      "disabled": true
+      "id": "991eeabb-6566-48ac-9daf-83f9bd197381",
+      "name": "Set status to created"
     },
     {
       "parameters": {
@@ -683,12 +692,11 @@
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
       "position": [
-        2580,
+        3020,
         -740
       ],
-      "id": "ba2132bd-79ad-46bc-a132-951ab5012838",
-      "name": "Set status to uploaded",
-      "disabled": true
+      "id": "880d8dc7-12b7-4731-8193-f0e540734b16",
+      "name": "Set status to uploaded"
     },
     {
       "parameters": {
@@ -719,7 +727,7 @@
         1280,
         -1060
       ],
-      "id": "7b7b90f3-1c0c-4b2c-be9b-cc06b921a677",
+      "id": "15ada02b-5275-465a-a567-3935c38c0a0d",
       "name": "Set status to failed",
       "credentials": {
         "supabaseApi": {
@@ -740,7 +748,7 @@
         -420,
         -3380
       ],
-      "id": "eaeb482d-e79f-4371-abd0-a21618967a5e",
+      "id": "06f66339-00a6-4b1e-bf17-d44d6ae1f230",
       "name": "Sticky Note"
     },
     {
@@ -751,7 +759,7 @@
         1480,
         -2060
       ],
-      "id": "fb4448e6-2ea9-4c4a-973b-af39b10a7e2a",
+      "id": "f851bd60-7c80-485e-8731-d69cba0c6544",
       "name": "No unprocessed stories in the database"
     },
     {
@@ -775,10 +783,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        3020,
+        3260,
         -1580
       ],
-      "id": "afe5e017-3802-4284-b9f7-4e682f0e4ed6",
+      "id": "f4e32ad1-01c1-47f5-82b0-00b281d838ed",
       "name": "HTTP Request"
     },
     {
@@ -801,7 +809,7 @@
         640,
         -1740
       ],
-      "id": "ec695da1-2415-4e17-8b6b-3ce127d5f152",
+      "id": "b49050f3-cb9e-4d90-bd7c-e3ca652c6779",
       "name": "Setup sex of the main character"
     },
     {
@@ -835,7 +843,7 @@
             {
               "id": "5b5a9281-1de3-429e-aaf3-8da03a38b979",
               "name": "lang_code",
-              "value": "en-gb",
+              "value": "en-us",
               "type": "string"
             },
             {
@@ -860,7 +868,7 @@
         20,
         -1740
       ],
-      "id": "e9d7b68b-ccdc-462e-b16a-112ecc1d9808",
+      "id": "aeb10b5e-dc09-4787-92bf-011f41485b3b",
       "name": "Configuration for story writing"
     },
     {
@@ -873,7 +881,7 @@
         360,
         -1740
       ],
-      "id": "ed3fe871-19a2-4579-ba25-260fb0e9ebb5",
+      "id": "c036bded-1112-4524-b456-2e67ca2e4110",
       "name": "Setup language"
     },
     {
@@ -893,10 +901,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3720,
+        3760,
         -1580
       ],
-      "id": "f8d7b64f-cde4-451d-b2af-b5cc481916b4",
+      "id": "0d9aeae3-5b3e-4162-a5f5-3f435bc89a8c",
       "name": "Set the final voice"
     },
     {
@@ -927,10 +935,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2520,
+        2880,
         -1740
       ],
-      "id": "547d60c8-104a-40c1-8ed8-e2070e4f00cf",
+      "id": "395650f3-2f46-4944-9e65-3666bfc0c97c",
       "name": "Is there a pre-selected voice to use?"
     },
     {
@@ -950,10 +958,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3100,
+        3340,
         -1860
       ],
-      "id": "dcd326fd-02d2-4f65-91a9-580230c0da57",
+      "id": "79556be5-d85c-420c-a6fc-dd9c8f755d9c",
       "name": "Keep the original voice value"
     },
     {
@@ -973,10 +981,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3200,
+        3440,
         -1580
       ],
-      "id": "137554d6-7f6a-4ebf-903c-a3ddbaa58335",
+      "id": "f255db09-6510-49a1-acaa-8804277d3655",
       "name": "Set a random voice"
     },
     {
@@ -1009,7 +1017,7 @@
         1180,
         -1740
       ],
-      "id": "bd812a04-fb51-4af9-8045-8605ce696772",
+      "id": "70fe908d-5dcf-4add-ada9-f0312662e446",
       "name": "Is there a story to process?"
     },
     {
@@ -1030,7 +1038,7 @@
         1780,
         -1740
       ],
-      "id": "3721b863-9b76-4abe-a9bb-4bffcf44c4dd",
+      "id": "de6fd847-3a4c-432a-93be-4cb986cadbe8",
       "name": "Write the story"
     },
     {
@@ -1053,7 +1061,7 @@
         1480,
         -740
       ],
-      "id": "86da44d2-b067-4a87-a544-1b7cc57996dc",
+      "id": "3abfc072-f1f5-4ef2-8a13-c3c9552e7d7a",
       "name": "Setup the download url"
     },
     {
@@ -1069,7 +1077,7 @@
         -420,
         -4120
       ],
-      "id": "2bf98c92-5626-49b4-9ad8-4391d69a4d5c",
+      "id": "aa91abd5-5e0a-499c-8a77-36f10deee18a",
       "name": "Sticky Note1"
     },
     {
@@ -1082,7 +1090,7 @@
         -140,
         -3940
       ],
-      "id": "6fdb70f1-0c78-445a-917e-afc4367c1be8",
+      "id": "a01595af-e261-44c5-a5a6-cdc164d1c9b7",
       "name": "OpenRouter Chat Model"
     },
     {
@@ -1095,7 +1103,7 @@
         20,
         -3760
       ],
-      "id": "0432b123-0a82-4327-ae33-cb9d0e48612d",
+      "id": "650a910f-c824-4cc0-8266-d106e8a2c61b",
       "name": "Google Gemini Chat Model"
     },
     {
@@ -1113,7 +1121,7 @@
         -320,
         -3940
       ],
-      "id": "d39fb3fe-0929-4d56-a63b-dcfcb7ed8c43",
+      "id": "1bc2ddca-e51f-4b21-a116-37c87092770d",
       "name": "OpenAI Chat Model"
     },
     {
@@ -1126,7 +1134,7 @@
         -320,
         -3760
       ],
-      "id": "7a48048c-3e0f-44a6-9647-57eb1687d953",
+      "id": "c2ce7193-bb7f-4e51-b6c7-43366413e5fd",
       "name": "Azure OpenAI Chat Model"
     },
     {
@@ -1139,14 +1147,14 @@
         -140,
         -3760
       ],
-      "id": "2c268109-4b4c-4c8d-aff9-7ffc40e65466",
+      "id": "088e8a71-5d2b-4770-976f-8c6633365965",
       "name": "xAI Grok Chat Model"
     },
     {
       "parameters": {
         "content": "# Create a story, generate a video and upload to YouTube",
         "height": 1880,
-        "width": 4420,
+        "width": 4440,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -1155,7 +1163,7 @@
         -420,
         -2300
       ],
-      "id": "6df16155-6857-4ebd-bfc8-e4c10601b859",
+      "id": "a24d8a1d-ec2e-4117-91fb-8fe994c46111",
       "name": "Sticky Note2"
     },
     {
@@ -1171,7 +1179,7 @@
         -40,
         -1900
       ],
-      "id": "c04c05a9-4365-4bc2-873e-74308385acbb",
+      "id": "16bca362-2179-4a6a-b598-f5034016d0d3",
       "name": "Sticky Note3"
     },
     {
@@ -1186,12 +1194,12 @@
         680,
         -4100
       ],
-      "id": "426c6df3-afe7-4b1a-b5c3-64cdcbf01207",
+      "id": "888c20ca-1619-4051-803d-075f9611774c",
       "name": "Sticky Note4"
     },
     {
       "parameters": {
-        "content": "# 1. Make sure to add a trigger node to both of the workflows\n\n# 2. Feel free to separate these workflows\n",
+        "content": "# 1. Make sure to add a trigger node to both of the workflows\n\n# 2. Feel free to separate these workflows\n\n# 3. Make sure the background video is 1920x1080",
         "height": 800,
         "width": 640,
         "color": 5
@@ -1199,11 +1207,48 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -1160,
+        -1180,
         -2820
       ],
-      "id": "4da2c723-390c-4aa2-a451-32960b6c2de8",
+      "id": "06ac85a3-b878-477f-b7af-a1043f4797aa",
       "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=<Instructions>\nCreate an attention-grabbing title, that is consise and descriptive for the following story in {{ $('Setup language').item.json.language }} ({{ $('Configuration for story writing').item.json.lang_code }}) language. The title should be maximum 100 characters.\n</Instructions>\n\n<Story>\n{{ $json.text }}\n</Story>\n\n/nothink"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        2320,
+        -1740
+      ],
+      "id": "e1ee5735-50f6-4be0-b9cb-a25cdd0f2d6c",
+      "name": "Create title"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5528f120-1fb8-4ef0-9357-f206ee8c4afe",
+              "name": "title",
+              "value": "={{ $json.text.split('</think>')[1].trim().replace(/\\n/g, '').replace(/ {2,}/g, ' ').replace(/\\*/g, '').trim() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2680,
+        -1740
+      ],
+      "id": "134992f9-cf46-4c82-8d40-4adb622ce7cc",
+      "name": "Cleanup title"
     }
   ],
   "pinData": {},
@@ -1245,6 +1290,11 @@
           },
           {
             "node": "Create character",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Create title",
             "type": "ai_languageModel",
             "index": 0
           }
@@ -1456,7 +1506,7 @@
       "main": [
         [
           {
-            "node": "Is there a pre-selected voice to use?",
+            "node": "Create title",
             "type": "main",
             "index": 0
           }
@@ -1646,17 +1696,39 @@
           }
         ]
       ]
+    },
+    "Create title": {
+      "main": [
+        [
+          {
+            "node": "Cleanup title",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cleanup title": {
+      "main": [
+        [
+          {
+            "node": "Is there a pre-selected voice to use?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "9b162ebb-5118-408a-93e6-7c6520d88f2e",
+  "versionId": "cee6903a-de72-4545-9e9b-27c937954589",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "9eBmwaOwz2bkEgZV",
+  "id": "LjkppBiYksNFmAzA",
   "tags": []
 }
