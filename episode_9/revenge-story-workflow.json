@@ -382,7 +382,8 @@
       "id": "667def5a-dc11-4a57-9000-46f1824dddca",
       "name": "Download the video",
       "alwaysOutputData": false,
-      "retryOnFail": false
+      "retryOnFail": false,
+      "disabled": true
     },
     {
       "parameters": {
@@ -406,7 +407,8 @@
           "id": "EvIEz3KvgFMPW9Ap",
           "name": "YouTube account"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -670,7 +672,8 @@
           "id": "ITjsOe1zjbHScIWk",
           "name": "Supabase revange videos"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -708,7 +711,8 @@
           "id": "ITjsOe1zjbHScIWk",
           "name": "Supabase revange videos"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -885,7 +889,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const languages = {\n  \"en-us\": \"english\",\n  \"en-gb\": \"english\",\n  \"zh\": \"simplified chinese\",\n  \"es\": \"spanish\",\n  \"fr\": \"french\",\n  \"it\": \"italian\",\n  \"pt\": \"brazilian portugese\"\n}\n\nconst language = languages[$('Configuration for story writing').item.json.lang_code];\n\nreturn {\n  language\n}"
+        "jsCode": "const languages = {\n  \"en-us\": \"english\",\n  \"en-gb\": \"english\",\n  \"zh\": \"simplified chinese\",\n  \"es\": \"spanish\",\n  \"fr\": \"french\",\n  \"it\": \"italian\",\n  \"pt\": \"brazilian portugese\",\n  \"hi\": \"hindi\"\n}\n\nconst language = languages[$('Configuration for story writing').item.json.lang_code];\n\nreturn {\n  language\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1736,7 +1740,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "c3de9d28-7ac6-4c2b-a5d7-c3f49302327f",
+  "versionId": "a280c2da-96c3-46a8-a33a-57f0e2de0575",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"

@@ -885,7 +885,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const languages = {\n  \"en-us\": \"english\",\n  \"en-gb\": \"english\",\n  \"zh\": \"simplified chinese\",\n  \"es\": \"spanish\",\n  \"fr\": \"french\",\n  \"it\": \"italian\",\n  \"pt\": \"brazilian portugese\"\n}\n\nconst language = languages[$('Configuration for story writing').item.json.lang_code];\n\nreturn {\n  language\n}"
+        "jsCode": "const languages = {\n  \"en-us\": \"english\",\n  \"en-gb\": \"english\",\n  \"zh\": \"simplified chinese\",\n  \"es\": \"spanish\",\n  \"fr\": \"french\",\n  \"it\": \"italian\",\n  \"pt\": \"brazilian portugese\",\n  \"hi\": \"hindi\"\n}\n\nconst language = languages[$('Configuration for story writing').item.json.lang_code];\n\nreturn {\n  language\n}"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -1736,7 +1736,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "476f4cc0-751e-4c7d-a7d8-03eb4ebad6b2",
+  "versionId": "b1c091a7-41ce-4049-be1c-f8fea79a1072",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
