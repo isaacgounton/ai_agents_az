@@ -1,5 +1,5 @@
 {
-  "name": "Episode 9: Revenge story creator 2",
+  "name": "Episode 9: Revenge story creator - final",
   "nodes": [
     {
       "parameters": {},
@@ -867,7 +867,7 @@
             {
               "id": "63752d0d-90a8-400a-9162-07dff0f3490d",
               "name": "sex",
-              "value": "female",
+              "value": "",
               "type": "string"
             }
           ]
@@ -1736,7 +1736,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "12c64860-5f84-4fc7-9ff7-bd48b5a68bc5",
+  "versionId": "c3de9d28-7ac6-4c2b-a5d7-c3f49302327f",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"

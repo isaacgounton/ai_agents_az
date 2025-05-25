@@ -1,5 +1,5 @@
 {
-  "name": "Episode 9: Revenge story creator - qwen3 local",
+  "name": "Episode 9: Revenge story creator - qwen3 final",
   "nodes": [
     {
       "parameters": {},
@@ -664,7 +664,13 @@
         -740
       ],
       "id": "991eeabb-6566-48ac-9daf-83f9bd197381",
-      "name": "Set status to created"
+      "name": "Set status to created",
+      "credentials": {
+        "supabaseApi": {
+          "id": "ITjsOe1zjbHScIWk",
+          "name": "Supabase revange videos"
+        }
+      }
     },
     {
       "parameters": {
@@ -696,7 +702,13 @@
         -740
       ],
       "id": "880d8dc7-12b7-4731-8193-f0e540734b16",
-      "name": "Set status to uploaded"
+      "name": "Set status to uploaded",
+      "credentials": {
+        "supabaseApi": {
+          "id": "ITjsOe1zjbHScIWk",
+          "name": "Supabase revange videos"
+        }
+      }
     },
     {
       "parameters": {
@@ -855,7 +867,7 @@
             {
               "id": "63752d0d-90a8-400a-9162-07dff0f3490d",
               "name": "sex",
-              "value": "female",
+              "value": "",
               "type": "string"
             }
           ]
@@ -1724,7 +1736,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "cee6903a-de72-4545-9e9b-27c937954589",
+  "versionId": "476f4cc0-751e-4c7d-a7d8-03eb4ebad6b2",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
