@@ -7,9 +7,18 @@
 
 ## Guides for the workflow
 
-- [Setting up Supabase](guide-supabase.md)
-- [Starting up the server](guide-start-server.md)
-- [How to use the server?](guide-using-the-server.md)
+1. [Setting up Supabase](guide-supabase.md)
+1. [Starting up the server](guide-start-server.md)
+1. [How to use the server?](guide-using-the-server.md)
+
+## Example assets
+
+- [Example background video](example_bgvideo.mp4)
+- [Example male narrator image](example_person_male.png)
+- [Example female narrator image](example_person_female.png)
+
+## Additional resources
+
 - [Kokoro voices](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)
 - [Join the Discord server](https://discord.gg/G7FJVJQ6RE)
 
