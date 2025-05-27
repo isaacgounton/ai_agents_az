@@ -20,7 +20,6 @@
 ## Additional resources
 
 - [Kokoro voices](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)
-- [Join the Discord server](https://discord.gg/G7FJVJQ6RE)
 
 ## Watch the video
 
