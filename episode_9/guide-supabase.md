@@ -1,5 +1,7 @@
 # How to setup Supabase
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw9)
+
 ## I. Creating the database schema
 
 1. Create a supabase account, and create a new project

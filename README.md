@@ -2,7 +2,7 @@
 
 In this repo, you can find the n8n templates we created for the episodes of [AI Agents A-Z](https://www.youtube.com/channel/UCloXqLhp_KGhHBe1kwaL2Tg).
 
-[Join our skool community for premium resources and more](https://www.skool.com/ai-agents-az?gh)
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gh))
 
 ## Season 1
 

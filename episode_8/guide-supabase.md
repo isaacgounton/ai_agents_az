@@ -1,6 +1,8 @@
 # Guide to create and setup the Supabase account
 
-Start by heading to [Supabase](https://supabase.com/) and create a new free account. 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+
+Start by heading to [Supabase](https://supabase.com/) and create a new free account.
 
 ## 1. Creating the database tables
 
@@ -53,6 +55,3 @@ Now, you can upload the reference image to the bucket by clicking on the `Upload
 <img width="831" alt="Screenshot 2025-05-09 at 9 02 07 AM" src="https://github.com/user-attachments/assets/6cc83262-b92c-4f74-86c3-a45c9c0456f8" />
 
 This is it, your Supabase account is ready to be used.
-
-
-

@@ -1,5 +1,7 @@
 # Episode 2: Automate daily digests using n8n
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw2)
+
 ## Get the resources
 
 - [Workflow: Daily Digest](daily_digest.json)

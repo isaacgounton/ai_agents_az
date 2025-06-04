@@ -1,5 +1,7 @@
 # Episode 5: Creating a blog writing system using deep research
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw5)
+
 ## Get the resources
 
 - [Subworkflow: Google Deep Research](subworkflow_google_deep_research.json)

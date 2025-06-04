@@ -1,5 +1,7 @@
 # How to run the server
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw9)
+
 ## Windows
 
 0. Install `Docker Desktop` from the Windows Store
@@ -12,7 +14,7 @@
 docker run -it --rm --name narrated-story-creator -p 8000:8000 gyoridavid/narrated-story-creator:latest
 ```
 
-Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test. 
+Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test.
 You can use `http://localhost:8000` as the server configuration inside n8n, however, if you are running n8n in a Docker container you need to use the `http://host.docker.internal:8000` server address.
 
 ## MacOS, Linux
@@ -23,7 +25,7 @@ Open a terminal, and run the docker command
 docker run -it --rm --name narrated-story-creator -p 8000:8000 gyoridavid/narrated-story-creator:latest
 ```
 
-Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test. 
+Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test.
 You can use `http://localhost:8000` as the server configuration inside n8n, however, if you are running n8n in a Docker container you need to use the `http://host.docker.internal:8000` server address.
 
 ## Nvidia / Cuda support
@@ -35,7 +37,7 @@ Start the container with the following command:
 docker run --rm --gpus=all -e NVIDIA_VISIBLE_DEVICES=all -e NVIDIA_DRIVER_CAPABILITIES=all -p 8000:8000 -it gyoridavid/narrated-story-creator:latest-cuda
 ```
 
-Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test. 
+Now, you can open [http://localhost:8000/health](http://localhost:8000/health) as a smoke-test.
 You can use `http://localhost:8000` as the server configuration inside n8n, however, if you are running n8n in a Docker container you need to use the `http://host.docker.internal:8000` server address.
 
 ## What if I'm runnign n8n in the cloud?

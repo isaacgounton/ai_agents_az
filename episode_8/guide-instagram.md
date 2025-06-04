@@ -1,5 +1,7 @@
 # Setting up Instagram for automations with n8n
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+
 ## Convert the Instagram account to a professional account
 
 > [!IMPORTANT]  
@@ -111,8 +113,7 @@ Add the Instagram product to your app.
 
 <img width="1008" alt="image" src="https://github.com/user-attachments/assets/4186f90b-b619-4c1c-9ea8-bfc5294eaeb4" />
 
-You don't need to configure it, just leave it as it is. 
-
+You don't need to configure it, just leave it as it is.
 
 ### 4. Create an access token
 
@@ -120,7 +121,7 @@ From the tools menu, select the `Graph API Explorer`
 
 <img width="877" alt="image" src="https://github.com/user-attachments/assets/006a40a7-894a-4bd0-9483-0d495b77206f" />
 
-You'll see this interface below. 
+You'll see this interface below.
 
 <img width="541" alt="image" src="https://github.com/user-attachments/assets/414ece47-2f1d-4d08-9998-ada85ffb065f" />
 

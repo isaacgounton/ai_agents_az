@@ -1,5 +1,7 @@
 # Episode 4: Creating a deep research subworkflow with Google Programmable Search
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw4)
+
 ## Get the resources
 
 - [Workflow: Google Deep Research](google_deep_research.json)

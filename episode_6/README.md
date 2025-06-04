@@ -1,5 +1,7 @@
 # Episode 6: Lead generation with X-Ray search and LinkedIn
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw6)
+
 > [!IMPORTANT]  
 > Make sure to replace the `{YOUR_GOOGLE_API_KEY}` and `{YOUR_GOOGLE_CUSTOM_SEARCH_ID}` placeholders in the `Configure` node. Also make sure to replace the `{YOUR_EMAIL}` placeholder in the Gmail node.
 

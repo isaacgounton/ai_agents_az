@@ -1,5 +1,7 @@
 # Episode 7: Creating Youtube short videos using our custom MCP server
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw7)
+
 <table>
   <tr>
     <td style="vertical-align: top;">
@@ -41,6 +43,7 @@ docker run -it --rm --name short-video-maker -p 3123:3123 -e LOG_LEVEL=debug -e 
 ```
 
 ### Resources
+
 - [Find more info in the Github repo](https://github.com/gyoridavid/short-video-maker)
 - [npm package](https://www.npmjs.com/package/short-video-maker)
 - [Docker](https://hub.docker.com/r/gyoridavid/short-video-maker)

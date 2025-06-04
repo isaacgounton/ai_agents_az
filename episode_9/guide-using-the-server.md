@@ -1,5 +1,7 @@
 # How to use the server?
 
+[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw9)
+
 I tried to make the simples possible server to use. You can find that there's not a lot of thing hard-coded to the server, you need to send the desired background video URL and person image to the server, and it will do the rest.
 The language selection was also simplified: just send the selected kokoro voice and the server will figure out which language it is.
 
