@@ -2,6 +2,8 @@
 
 In this repo, you can find the n8n templates we created for the episodes of [AI Agents A-Z](https://www.youtube.com/channel/UCloXqLhp_KGhHBe1kwaL2Tg).
 
+[Join our skool community for premium resources and more](https://www.skool.com/ai-agents-az)
+
 ## Season 1
 
 - [Episode 1: Creating a prescription agent](episode_1)
