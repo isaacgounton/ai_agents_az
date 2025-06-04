@@ -1,15 +1,25 @@
 {
-  "name": "Episode 9: Revenge story creator - final",
+  "name": "My workflow 14",
   "nodes": [
+    {
+      "parameters": {
+        "content": "# 📚 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w9)\n\n## Be part of a growing community and help us create more content like this",
+        "height": 220,
+        "width": 940,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [8200, 5780],
+      "id": "44f740f1-7849-4d41-bf55-57bb89ad4c08",
+      "name": "Sticky Note6"
+    },
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        -240,
-        -1740
-      ],
-      "id": "53c669c5-d85b-4252-a2dd-c7bf84680831",
+      "position": [8380, 7700],
+      "id": "7a6b6406-29aa-4aa6-a486-ebb467c4833b",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -19,11 +29,8 @@
       },
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
-      "position": [
-        340,
-        -3100
-      ],
-      "id": "e02f1176-711c-44d1-9138-b3fad9e884a0",
+      "position": [8960, 6340],
+      "id": "fd0c9c49-15ab-4602-836c-6b6fa28b6308",
       "name": "Split Out"
     },
     {
@@ -33,11 +40,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmOllama",
       "typeVersion": 1,
-      "position": [
-        340,
-        -3760
-      ],
-      "id": "4debe0e4-8eb2-41ef-a7e7-b216062c2478",
+      "position": [11600, 5760],
+      "id": "003da475-5443-4a25-9cef-bf9f1bf8e754",
       "name": "Ollama Model",
       "credentials": {
         "ollamaApi": {
@@ -52,11 +56,8 @@
       },
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
-      "position": [
-        900,
-        -3100
-      ],
-      "id": "a8b7f961-9b76-4d2d-9847-e8fdc993d95d",
+      "position": [9520, 6340],
+      "id": "62b2c25f-79e5-4246-956b-50f0562e718a",
       "name": "Loop Over Items"
     },
     {
@@ -86,11 +87,8 @@
       },
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
-      "position": [
-        600,
-        -3100
-      ],
-      "id": "8407cc8c-8dca-4f16-b790-46a941b32e8e",
+      "position": [9220, 6340],
+      "id": "817dfe35-f80e-4ea3-bf40-bc7557ca2092",
       "name": "Filter"
     },
     {
@@ -123,11 +121,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        2880,
-        -2780
-      ],
-      "id": "1563fd09-6647-470b-8fa8-7a7672eccee0",
+      "position": [11500, 6660],
+      "id": "00f4f523-68a7-4268-acaf-5c0e213aaac3",
       "name": "Skip post",
       "credentials": {
         "supabaseApi": {
@@ -166,11 +161,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        2560,
-        -2780
-      ],
-      "id": "1a594090-55f7-40de-af92-1785631ab7bb",
+      "position": [11180, 6660],
+      "id": "94179383-8eb3-4dda-bde8-5e77e9ac2757",
       "name": "Save post",
       "credentials": {
         "supabaseApi": {
@@ -199,11 +191,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.textClassifier",
       "typeVersion": 1,
-      "position": [
-        2080,
-        -3080
-      ],
-      "id": "efd6d869-e1d9-475e-a674-e01a818aeacd",
+      "position": [10700, 6360],
+      "id": "17e97449-0128-4499-bef9-7c2c13c850ab",
       "name": "Is it a story?"
     },
     {
@@ -213,11 +202,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        20,
-        -3100
-      ],
-      "id": "91dea14a-1058-4f89-b4f5-49e0e73a6801",
+      "position": [8640, 6340],
+      "id": "ddffab62-bf62-48b8-a88e-1c3e38e9f070",
       "name": "Get stories from Reddit"
     },
     {
@@ -254,11 +240,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1360,
-        -3100
-      ],
-      "id": "68ac32ab-8e6c-44c4-8a2b-fab2e9913b42",
+      "position": [9980, 6340],
+      "id": "6b53487d-e687-48b1-8f42-4c159cd0d682",
       "name": "Set fields"
     },
     {
@@ -276,11 +259,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1620,
-        -3100
-      ],
-      "id": "35cfadeb-a851-44d2-b2c4-a7fbc58f4b93",
+      "position": [10240, 6340],
+      "id": "bdfa83cd-ef43-4fdb-9bfa-5173a13cbeb9",
       "name": "Look up the id of the post",
       "alwaysOutputData": true,
       "credentials": {
@@ -316,11 +296,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1840,
-        -3100
-      ],
-      "id": "b996cc2e-eefa-45ea-8275-b0939c1fa4e8",
+      "position": [10460, 6340],
+      "id": "b416bd7a-6732-4156-b1a3-4e5a3f9aa04a",
       "name": "Already exists?"
     },
     {
@@ -340,11 +317,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        920,
-        -1740
-      ],
-      "id": "2eeb9e63-f01e-4ec8-8cda-8a2bb32739d9",
+      "position": [9540, 7700],
+      "id": "a1782523-18d5-43e1-8113-a12931e65a49",
       "name": "Get the next story to process",
       "alwaysOutputData": true,
       "credentials": {
@@ -360,11 +334,8 @@
       },
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "position": [
-        460,
-        -760
-      ],
-      "id": "646deb58-6cc6-40f9-a76b-3ce9c27b3058",
+      "position": [9080, 8680],
+      "id": "32ff01a5-a297-4a2a-aaa2-81f4566d0e55",
       "name": "Wait",
       "webhookId": "f7cb7ba8-fae0-41f1-8ee6-6313c48d04c4"
     },
@@ -375,11 +346,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2260,
-        -1080
-      ],
-      "id": "667def5a-dc11-4a57-9000-46f1824dddca",
+      "position": [10880, 8360],
+      "id": "92af8bed-8975-4896-9d23-40d826121070",
       "name": "Download the video",
       "alwaysOutputData": false,
       "retryOnFail": false,
@@ -396,11 +364,8 @@
       },
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
-      "position": [
-        2720,
-        -1080
-      ],
-      "id": "7e11ac67-91e0-4a13-bcc8-8837addaf160",
+      "position": [11340, 8360],
+      "id": "255717bd-5df0-4eae-a539-0dc130f6ec27",
       "name": "Share on YouTube",
       "credentials": {
         "youTubeOAuth2Api": {
@@ -417,11 +382,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        680,
-        -760
-      ],
-      "id": "02d0225e-fdaf-43ac-b8f7-b016e1697847",
+      "position": [9300, 8680],
+      "id": "01b61fb3-4183-41c9-b659-a75286b32ae6",
       "name": "Check video status",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -463,11 +425,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        20,
-        -760
-      ],
-      "id": "0facd03d-1798-405e-a270-3b61289067fc",
+      "position": [8640, 8680],
+      "id": "beb9bc68-32a4-4b32-86e7-da4e1d3d7e5c",
       "name": "Start creating the video"
     },
     {
@@ -554,22 +513,16 @@
       },
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.2,
-      "position": [
-        940,
-        -760
-      ],
-      "id": "3b213ca9-1584-4f23-97ab-90d507774e78",
+      "position": [9560, 8680],
+      "id": "cbd57f89-92d4-491d-8bd6-d3ffd9015022",
       "name": "Switch"
     },
     {
       "parameters": {},
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
-      "position": [
-        1500,
-        -1060
-      ],
-      "id": "3e13268d-d04e-4ade-91cd-f8810bd38a48",
+      "position": [10120, 8380],
+      "id": "53691a2c-4886-4c2a-a8cb-b1bcfb0b54c9",
       "name": "No Operation, do nothing"
     },
     {
@@ -588,11 +541,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        2140,
-        -1740
-      ],
-      "id": "28062ee4-2e06-4609-92bf-6940650e30de",
+      "position": [10760, 7700],
+      "id": "1fd07757-b547-4fb7-820b-a4f68fefee8a",
       "name": "Cleanup text"
     },
     {
@@ -629,11 +579,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1,
-      "position": [
-        1440,
-        -1740
-      ],
-      "id": "c26b45b7-1adf-46a7-b5c7-8af6211390f9",
+      "position": [10060, 7700],
+      "id": "c59d07db-83b1-4348-ac15-dcf7ec857966",
       "name": "Create character"
     },
     {
@@ -661,11 +608,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1740,
-        -740
-      ],
-      "id": "f8905eb1-4417-4644-8676-39d23cdc645c",
+      "position": [10360, 8700],
+      "id": "c886d36b-3312-4366-8b5b-7afc80000a1b",
       "name": "Set status to created",
       "credentials": {
         "supabaseApi": {
@@ -700,11 +644,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        3020,
-        -740
-      ],
-      "id": "64e2703d-fcea-4733-8276-580e63df08ac",
+      "position": [11640, 8700],
+      "id": "ea2c645d-7b04-448b-a8b6-06d019289181",
       "name": "Set status to uploaded",
       "credentials": {
         "supabaseApi": {
@@ -739,11 +680,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1280,
-        -1060
-      ],
-      "id": "b6b68753-1a7c-4329-90be-c8674fcf91f7",
+      "position": [9900, 8380],
+      "id": "90c28278-dfac-486d-9d03-799dbd5e84bd",
       "name": "Set status to failed",
       "credentials": {
         "supabaseApi": {
@@ -760,22 +698,16 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -420,
-        -3380
-      ],
-      "id": "b989335e-78d8-4d7d-acfc-db9bea70910f",
+      "position": [8200, 6100],
+      "id": "ec6e673a-8239-478d-9464-91cac112f3a0",
       "name": "Sticky Note"
     },
     {
       "parameters": {},
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
-      "position": [
-        1480,
-        -2060
-      ],
-      "id": "f0e676b5-0cc2-4604-800b-d6edafb1d6a9",
+      "position": [10100, 7380],
+      "id": "afbdd426-fe3b-46c0-a82c-0c80e2bc1d48",
       "name": "No unprocessed stories in the database"
     },
     {
@@ -798,11 +730,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        3260,
-        -1580
-      ],
-      "id": "2279ea5f-d97a-470c-a91d-480dfa54cbba",
+      "position": [11880, 7860],
+      "id": "8c0cd612-9ffb-4e47-ac15-36c99a2b1893",
       "name": "HTTP Request"
     },
     {
@@ -821,11 +750,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        640,
-        -1740
-      ],
-      "id": "44bd9195-a6d8-4c76-b2df-02bb39f623c5",
+      "position": [9260, 7700],
+      "id": "4166645d-9883-4492-8a93-9035f9d0e7c1",
       "name": "Setup sex of the main character"
     },
     {
@@ -880,11 +806,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        20,
-        -1740
-      ],
-      "id": "13eedf3b-9702-4690-b631-828c7478563f",
+      "position": [8640, 7700],
+      "id": "17ed5f75-e96e-4bfe-bb43-5681cd828a7e",
       "name": "Configuration for story writing"
     },
     {
@@ -893,11 +816,8 @@
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        360,
-        -1740
-      ],
-      "id": "edebb0b2-f25b-4f85-a39a-a8cb20466b77",
+      "position": [8980, 7700],
+      "id": "7a584890-9db5-48bd-a1ed-da9054502f90",
       "name": "Setup language"
     },
     {
@@ -916,11 +836,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        3760,
-        -1580
-      ],
-      "id": "4a9a196d-f0f0-415e-a25a-0a9ab85b6379",
+      "position": [12380, 7860],
+      "id": "9d32ed10-d523-4361-88da-422f7ab9887f",
       "name": "Set the final voice"
     },
     {
@@ -950,11 +867,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        2880,
-        -1740
-      ],
-      "id": "e5252ddf-3fa5-4588-b8c6-030ff89c7097",
+      "position": [11500, 7700],
+      "id": "43b3c92e-4495-4044-a357-2e34707c055b",
       "name": "Is there a pre-selected voice to use?"
     },
     {
@@ -973,11 +887,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        3340,
-        -1860
-      ],
-      "id": "0212e5ae-6e6f-463c-a544-70a14caec462",
+      "position": [11960, 7580],
+      "id": "b6d1aa01-c785-4b13-9820-6f7d0b82e0bd",
       "name": "Keep the original voice value"
     },
     {
@@ -996,11 +907,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        3440,
-        -1580
-      ],
-      "id": "611fdd64-a7c3-4eb4-b068-096dd8f226df",
+      "position": [12060, 7860],
+      "id": "c465d6f0-022c-4ebe-a08e-7daaec94d25e",
       "name": "Set a random voice"
     },
     {
@@ -1029,11 +937,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1180,
-        -1740
-      ],
-      "id": "533ff614-5db7-4258-a763-c61bfe395cf0",
+      "position": [9800, 7700],
+      "id": "0e1f4b0e-23b0-445e-90cd-04ce42b6b929",
       "name": "Is there a story to process?"
     },
     {
@@ -1050,11 +955,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
-      "position": [
-        1780,
-        -1740
-      ],
-      "id": "da8fcb1c-5ac9-4b1a-b135-7c141cc8b855",
+      "position": [10400, 7700],
+      "id": "114ef577-58c9-416e-9d09-c59c1bcd88c2",
       "name": "Write the story"
     },
     {
@@ -1073,27 +975,21 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1480,
-        -740
-      ],
-      "id": "529a6c6f-0183-43ce-9ab6-ca1c808d808a",
+      "position": [10100, 8700],
+      "id": "278fba11-a0dd-4e42-80a9-c8e1ec94e226",
       "name": "Setup the download url"
     },
     {
       "parameters": {
         "content": "# Select an LLM model",
-        "height": 600,
-        "width": 1000,
+        "height": 560,
+        "width": 1320,
         "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -420,
-        -4120
-      ],
-      "id": "b184a26e-2a26-41e8-8726-41a9de7beff7",
+      "position": [10520, 5440],
+      "id": "aae59b18-9c1b-44f4-b3e7-fc4e7eb9ebe2",
       "name": "Sticky Note1"
     },
     {
@@ -1102,11 +998,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
       "typeVersion": 1,
-      "position": [
-        -140,
-        -3940
-      ],
-      "id": "af8f8351-76a6-4cd5-bc63-95170882933b",
+      "position": [11120, 5580],
+      "id": "e18bffde-322f-4fde-843d-6a90abb67e97",
       "name": "OpenRouter Chat Model"
     },
     {
@@ -1115,11 +1008,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
-      "position": [
-        20,
-        -3760
-      ],
-      "id": "dc42f68f-edf1-4c1d-b190-def1ca83df9c",
+      "position": [11280, 5760],
+      "id": "92edfcd9-ef9b-4085-acf1-f11133374073",
       "name": "Google Gemini Chat Model"
     },
     {
@@ -1133,11 +1023,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        -320,
-        -3940
-      ],
-      "id": "d7ed9581-131e-4e43-ad83-3efbd77dcdbc",
+      "position": [10940, 5580],
+      "id": "5f7c8e6b-89f0-434a-ab32-6b501e205dd4",
       "name": "OpenAI Chat Model"
     },
     {
@@ -1146,11 +1033,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
       "typeVersion": 1,
-      "position": [
-        -320,
-        -3760
-      ],
-      "id": "b75384d1-e5d2-4462-addd-b95248b19cee",
+      "position": [10940, 5760],
+      "id": "714bda1d-5218-4b5c-a71f-dab412e0b909",
       "name": "Azure OpenAI Chat Model"
     },
     {
@@ -1159,11 +1043,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
-      "position": [
-        -140,
-        -3760
-      ],
-      "id": "cec973c7-090e-4267-b9c5-c0fad859b19e",
+      "position": [11120, 5760],
+      "id": "32e1b025-ca81-4e5e-9e9d-a036a507ec6b",
       "name": "xAI Grok Chat Model"
     },
     {
@@ -1175,11 +1056,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -420,
-        -2300
-      ],
-      "id": "93ebc2e0-e4f5-4951-b4a9-05d9fe2f8a9b",
+      "position": [8200, 7140],
+      "id": "fbb9c94f-5704-4758-a308-0041e5570759",
       "name": "Sticky Note2"
     },
     {
@@ -1191,26 +1069,20 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -40,
-        -1900
-      ],
-      "id": "0fba4f6a-37c4-4795-94b8-8a327f41d95c",
+      "position": [8580, 7540],
+      "id": "491bcd1e-021c-478c-9233-5031abea936a",
       "name": "Sticky Note3"
     },
     {
       "parameters": {
-        "content": "# [Watch the video on YouTube](https://youtu.be/ttt9da4f1wM)\n\n# [Read the guides on how to setup Supabase, start and use the server](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_9)\n\n# [Need help? Join the Discord server](https://discord.gg/G7FJVJQ6RE)",
-        "height": 580,
-        "width": 1240
+        "content": "# [Watch the video on YouTube](https://youtu.be/ttt9da4f1wM)\n\n# [Read the guides on how to setup Supabase, start and use the server](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_9)",
+        "height": 220,
+        "width": 1260
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        680,
-        -4100
-      ],
-      "id": "b7ccf28b-57ca-4ab0-a094-0a5087b06cbb",
+      "position": [9200, 5780],
+      "id": "f62a29f9-eb48-4da2-801d-b3cda28fcef6",
       "name": "Sticky Note4"
     },
     {
@@ -1222,11 +1094,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -1180,
-        -2820
-      ],
-      "id": "eb47f2db-0dd7-4303-bdcd-a04aeaa9e62f",
+      "position": [7440, 6620],
+      "id": "e16fc50b-631c-454e-981e-0013ecd0f7c3",
       "name": "Sticky Note5"
     },
     {
@@ -1236,11 +1105,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
-      "position": [
-        2320,
-        -1740
-      ],
-      "id": "a8023d4d-0002-4fae-8f9d-5bbbc5c7c968",
+      "position": [10940, 7700],
+      "id": "08ad632c-106d-4a8a-af39-ba3250f1fd9c",
       "name": "Create title"
     },
     {
@@ -1259,11 +1125,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        2680,
-        -1740
-      ],
-      "id": "5db9d0b9-02a3-4b16-af96-9a99db4378b5",
+      "position": [11300, 7700],
+      "id": "d4ff9399-1f72-4982-918d-d7a738334935",
       "name": "Cleanup title"
     }
   ],
@@ -1529,11 +1392,6 @@
         ]
       ]
     },
-    "No Operation, do nothing": {
-      "main": [
-        []
-      ]
-    },
     "Create character": {
       "main": [
         [
@@ -1740,11 +1598,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "a280c2da-96c3-46a8-a33a-57f0e2de0575",
+  "versionId": "501701f7-79bd-46ba-bd6b-1e7b399b0711",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "FPpFkTG9ia6gOgd4",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

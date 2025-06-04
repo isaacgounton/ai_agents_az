@@ -1,15 +1,25 @@
 {
-  "name": "Episode 8: Instagram influencer",
+  "name": "My workflow 14",
   "nodes": [
+    {
+      "parameters": {
+        "content": "# 📚 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w8)\n\n## Be part of a growing community and help us create more content like this",
+        "height": 220,
+        "width": 700,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [11480, 4780],
+      "id": "44f740f1-7849-4d41-bf55-57bb89ad4c08",
+      "name": "Sticky Note6"
+    },
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        -620,
-        840
-      ],
-      "id": "05123d37-3b5f-4e69-a2a8-a7ba379c882e",
+      "position": [10560, 5300],
+      "id": "3ccf5307-72ee-4a71-8e12-1a7409d03d9e",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -70,11 +80,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        -100,
-        840
-      ],
-      "id": "827e13c1-a1aa-4054-a47f-c298465b2b55",
+      "position": [11080, 5300],
+      "id": "b0607ab4-24e4-487b-88e3-9a0d5a0072cb",
       "name": "Configure workflow"
     },
     {
@@ -99,11 +106,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1920,
-        720
-      ],
-      "id": "f85faf63-741c-479c-9b14-94c5e65d752d",
+      "position": [13100, 5180],
+      "id": "950ff496-5a60-444e-b79b-52732eca22f5",
       "name": "Change request fields"
     },
     {
@@ -114,11 +118,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        260,
-        600
-      ],
-      "id": "f2f0fc83-8f91-4bb4-8037-1750fa26928b",
+      "position": [11440, 5060],
+      "id": "fb5971c3-d331-4d87-b70c-c9ad84406935",
       "name": "Sticky Note"
     },
     {
@@ -144,11 +145,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        360,
-        1420
-      ],
-      "id": "ea113960-0d2f-4a24-88a6-a80f0b391e29",
+      "position": [11540, 5880],
+      "id": "1a2826a3-117c-4ee6-a90e-8f737cf1dc2d",
       "name": "Get monthly plan",
       "alwaysOutputData": true,
       "credentials": {
@@ -180,11 +178,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1900,
-        1420
-      ],
-      "id": "9f658870-a229-449d-8751-7b95da068f75",
+      "position": [13080, 5880],
+      "id": "4c0d36dd-8288-46f6-b993-a449c2600afb",
       "name": "Change request fields1"
     },
     {
@@ -214,11 +209,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1720,
-        1420
-      ],
-      "id": "27c5e1e7-d4d8-4d40-9f53-41cfea576e82",
+      "position": [12900, 5880],
+      "id": "21bf3a34-6d45-4098-9aaa-43e2fe7e6489",
       "name": "Need changes?1"
     },
     {
@@ -229,11 +221,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        260,
-        1280
-      ],
-      "id": "14e5f603-c1fc-4539-88c8-693f0f8cde62",
+      "position": [11440, 5740],
+      "id": "972096da-cc38-4260-a617-1fa1f2bf9e37",
       "name": "Sticky Note1"
     },
     {
@@ -263,11 +252,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        740,
-        1420
-      ],
-      "id": "337fb8f4-2192-4896-acee-7adaa0945a3b",
+      "position": [11920, 5880],
+      "id": "024b1c3d-d45e-4434-9cb2-99e75b6f1ef6",
       "name": "Has monthly plan?"
     },
     {
@@ -293,11 +279,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        940,
-        1420
-      ],
-      "id": "2fde5405-919f-41c6-bfd9-94d046b78fb8",
+      "position": [12120, 5880],
+      "id": "5450b9db-877c-44e7-a579-33600307c456",
       "name": "Get instructions on the monthly plan",
       "webhookId": "03a0b1ff-a665-4657-9fa2-e43aaa7e59ad",
       "credentials": {
@@ -342,11 +325,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        1520,
-        1420
-      ],
-      "id": "63e7a2c6-7fed-4aca-82a5-b575fd1f51df",
+      "position": [12700, 5880],
+      "id": "b3ff026d-456b-44e1-9b6c-9681e5324e2d",
       "name": "Montly plan approval",
       "webhookId": "08e878d2-3f61-45b5-9b90-e06f96f632ad",
       "credentials": {
@@ -378,11 +358,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1900,
-        1640
-      ],
-      "id": "3dc4eb23-31a4-4e77-a9ee-3b0e179a4e45",
+      "position": [13080, 6100],
+      "id": "f41dc1e4-27e0-4cc6-8bf9-79608c661fcc",
       "name": "Save monthly plan",
       "credentials": {
         "supabaseApi": {
@@ -399,11 +376,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        260,
-        1980
-      ],
-      "id": "0adc78f8-d6d9-4628-8111-72f35a98a3c2",
+      "position": [11440, 6440],
+      "id": "41676457-032f-4378-bcca-3de5a95eadb8",
       "name": "Sticky Note2"
     },
     {
@@ -425,11 +399,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        360,
-        2080
-      ],
-      "id": "1bbf3c31-4ceb-45c5-9936-ece7a8c601a2",
+      "position": [11540, 6540],
+      "id": "41866756-35cf-4215-b7df-fb3676e99dc1",
       "name": "Get weekly plan",
       "retryOnFail": false,
       "alwaysOutputData": true,
@@ -467,11 +438,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        740,
-        2080
-      ],
-      "id": "d165815f-af6e-475e-addb-b85d2f35e12b",
+      "position": [11920, 6540],
+      "id": "1b6df514-a87f-45f0-b56b-17ba2c72d323",
       "name": "Has weekly plan?"
     },
     {
@@ -497,11 +465,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        940,
-        2080
-      ],
-      "id": "8750563d-51ce-4a3b-9b80-a739cedcc6db",
+      "position": [12120, 6540],
+      "id": "bb47c284-8b94-4c2c-a9f4-c40179e7feca",
       "name": "Get instructions on the weekly plan",
       "webhookId": "03a0b1ff-a665-4657-9fa2-e43aaa7e59ad",
       "credentials": {
@@ -546,11 +511,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        1460,
-        2080
-      ],
-      "id": "bfd8c01c-5715-4825-8c89-47ea38562161",
+      "position": [12640, 6540],
+      "id": "33c15070-2fd6-462a-8b23-580bd04b1629",
       "name": "Weekly plan approval",
       "webhookId": "08e878d2-3f61-45b5-9b90-e06f96f632ad",
       "credentials": {
@@ -587,11 +549,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1640,
-        2080
-      ],
-      "id": "8292a83d-137d-4569-ac5b-3e7a60defeaa",
+      "position": [12820, 6540],
+      "id": "e17a3a0f-00b9-4bcc-b861-dc3bc167c24b",
       "name": "Changes to the weekly plan?"
     },
     {
@@ -616,11 +575,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1820,
-        2080
-      ],
-      "id": "74f075b3-cae0-424e-b38b-733fd6d6d6b9",
+      "position": [13000, 6540],
+      "id": "229299f6-967a-46aa-9a7a-c4833153c94c",
       "name": "Weekly plan change fields"
     },
     {
@@ -645,11 +601,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1820,
-        2300
-      ],
-      "id": "38579531-f529-4ea2-b96f-5ceb110a6784",
+      "position": [13000, 6760],
+      "id": "b6e3d2ad-f4f5-4c38-9367-6cb1b265ac30",
       "name": "Save weekly plan",
       "credentials": {
         "supabaseApi": {
@@ -665,11 +618,8 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        560,
-        2840
-      ],
-      "id": "21103a1f-0536-4e4e-bac5-4945e30a27c9",
+      "position": [11740, 7300],
+      "id": "459fc3f0-5610-4a8d-adc2-d7dffa659786",
       "name": "merge previous week's posts"
     },
     {
@@ -680,9 +630,7 @@
         "nodeCredentialType": "openAiApi",
         "sendHeaders": true,
         "headerParameters": {
-          "parameters": [
-            {}
-          ]
+          "parameters": [{}]
         },
         "sendBody": true,
         "contentType": "multipart-form-data",
@@ -723,11 +671,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1500,
-        2840
-      ],
-      "id": "e3a4d033-294d-42b4-b9d4-1fcf20a51481",
+      "position": [12680, 7300],
+      "id": "9a529579-9b39-4c05-a63b-fc36cbd126de",
       "name": "Generate image with OpenAI",
       "credentials": {
         "openAiApi": {
@@ -744,11 +689,8 @@
       },
       "type": "n8n-nodes-base.convertToFile",
       "typeVersion": 1.1,
-      "position": [
-        1700,
-        2840
-      ],
-      "id": "7c426834-b476-4813-9436-99a64e2cee15",
+      "position": [12880, 7300],
+      "id": "a57fcb43-7a88-4c4a-806d-03b2083e803f",
       "name": "Convert response to image"
     },
     {
@@ -767,11 +709,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        2100,
-        2840
-      ],
-      "id": "08456ecb-fa12-4e1e-bf40-06a92960de05",
+      "position": [13280, 7300],
+      "id": "e81e057f-e6dc-41e9-86e2-3622467d22a9",
       "name": "Add share link"
     },
     {
@@ -809,11 +748,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        2300,
-        2840
-      ],
-      "id": "efc0b271-2ce3-4db4-9991-1c65593107c8",
+      "position": [13480, 7300],
+      "id": "588482c1-4540-49c9-91e8-6e49d84b634d",
       "name": "Get approval for the post",
       "webhookId": "728f8049-2461-4c13-af6d-468328d16020",
       "credentials": {
@@ -850,11 +786,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        360,
-        3180
-      ],
-      "id": "5e1f5ab0-8638-48d1-bcec-60d7b9047d44",
+      "position": [11540, 7640],
+      "id": "fd075aa0-74f8-4de8-bc03-816b1db58047",
       "name": "Post approved?"
     },
     {
@@ -885,11 +818,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        580,
-        3180
-      ],
-      "id": "24c86689-d3e0-4741-a1cc-f92fbb4fc3e5",
+      "position": [11760, 7640],
+      "id": "f7918566-9a34-4d64-b570-a90901f23859",
       "name": "Add post change request fields"
     },
     {
@@ -915,11 +845,8 @@
       },
       "type": "n8n-nodes-base.facebookGraphApi",
       "typeVersion": 1,
-      "position": [
-        360,
-        3860
-      ],
-      "id": "5e13b93a-f830-469e-993e-e52de012fade",
+      "position": [11540, 8320],
+      "id": "83f3e4f9-dd9b-421c-98fd-7ffdab81c5c8",
       "name": "Facebook Graph API",
       "credentials": {
         "facebookGraphApi": {
@@ -935,11 +862,8 @@
       },
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
-      "position": [
-        1100,
-        2840
-      ],
-      "id": "3a220608-f5bf-4387-90d5-1727a2201489",
+      "position": [12280, 7300],
+      "id": "1fb1ba03-2a81-46f5-8c4e-7fdda6afcb42",
       "name": "Generate unique id"
     },
     {
@@ -969,11 +893,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1900,
-        2840
-      ],
-      "id": "d5f6ec7e-e29a-434d-a29c-85a961325006",
+      "position": [13080, 7300],
+      "id": "a5738305-0752-498f-8123-046918748134",
       "name": "Upload image to Supabase",
       "credentials": {
         "supabaseApi": {
@@ -1001,11 +922,8 @@
       },
       "type": "n8n-nodes-base.facebookGraphApi",
       "typeVersion": 1,
-      "position": [
-        560,
-        3860
-      ],
-      "id": "ea13dfd1-dfd9-494d-a39c-554732cf8c67",
+      "position": [11740, 8320],
+      "id": "c329a789-ca8d-402a-98cf-bcbc3e7b04c2",
       "name": "Facebook Graph API1",
       "credentials": {
         "facebookGraphApi": {
@@ -1037,11 +955,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        940,
-        720
-      ],
-      "id": "6807bd28-670a-4818-aa41-644933adf442",
+      "position": [12120, 5180],
+      "id": "2ff88578-a1f2-485a-9c6d-1afa42d39ba8",
       "name": "Get instructions on the quarterly plan",
       "webhookId": "03a0b1ff-a665-4657-9fa2-e43aaa7e59ad",
       "credentials": {
@@ -1078,11 +993,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        720,
-        720
-      ],
-      "id": "7c38a9b2-5bb3-4f31-abbe-8c558e1dd39b",
+      "position": [11900, 5180],
+      "id": "8658f35f-0933-4feb-bf19-830aac6d934f",
       "name": "Has quarterly plan?"
     },
     {
@@ -1104,11 +1016,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        340,
-        720
-      ],
-      "id": "1905495e-b122-49b0-b063-bc66e18e59d3",
+      "position": [11520, 5180],
+      "id": "a033771b-bd35-4a9a-9fad-c03c8544918f",
       "name": "Get quarterly plan",
       "alwaysOutputData": true,
       "credentials": {
@@ -1153,11 +1062,8 @@
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        1520,
-        720
-      ],
-      "id": "f802e0ff-c49d-4bdb-be39-fc2647549a86",
+      "position": [12700, 5180],
+      "id": "2d7cdc87-fc8f-423a-b81a-b7849be695bc",
       "name": "Get approval on the quarterly plan",
       "webhookId": "08e878d2-3f61-45b5-9b90-e06f96f632ad",
       "credentials": {
@@ -1189,11 +1095,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        1920,
-        940
-      ],
-      "id": "017d5b8f-26f9-4abe-8405-b2de27586554",
+      "position": [13100, 5400],
+      "id": "64f373b9-eef5-4574-b7c7-552ff46072ed",
       "name": "Save quarterly plan",
       "credentials": {
         "supabaseApi": {
@@ -1209,11 +1112,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1300,
-        2840
-      ],
-      "id": "491d1bf6-77c8-4259-ad95-9377a9825988",
+      "position": [12480, 7300],
+      "id": "b4684a40-19f3-4bfa-8db7-c1e56e8ffb58",
       "name": "Download the reference image"
     },
     {
@@ -1233,11 +1133,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        360,
-        2840
-      ],
-      "id": "1e2f134c-e6a0-4956-8de7-006556fc632b",
+      "position": [11540, 7300],
+      "id": "1c195ab6-ef01-4fd9-9390-564cc21e9b18",
       "name": "Get posts from the past 7 days",
       "alwaysOutputData": true,
       "credentials": {
@@ -1256,11 +1153,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        280,
-        3680
-      ],
-      "id": "04c78cf5-0b9f-4a1b-9667-926e25571c38",
+      "position": [11460, 8140],
+      "id": "8beb9d8f-47aa-4166-aa87-dc8c7ec97e4f",
       "name": "Sticky Note3"
     },
     {
@@ -1272,11 +1166,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        260,
-        2660
-      ],
-      "id": "8b570755-9a80-47d2-b6d8-e40722b9f686",
+      "position": [11440, 7120],
+      "id": "09ca08f7-117e-449c-80c3-86d9abc78ddc",
       "name": "Sticky Note4"
     },
     {
@@ -1288,11 +1179,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -220,
-        600
-      ],
-      "id": "658c6ec0-de21-4b4d-91ae-cad159631310",
+      "position": [10960, 5060],
+      "id": "81e22521-8b23-4a34-9aba-0a284d7fd63e",
       "name": "Sticky Note5"
     },
     {
@@ -1313,11 +1201,8 @@
       },
       "type": "n8n-nodes-base.supabase",
       "typeVersion": 1,
-      "position": [
-        360,
-        3420
-      ],
-      "id": "c3d11e38-01ef-4e5a-972d-8bf1ff0879c3",
+      "position": [11540, 7880],
+      "id": "3c3f1a81-bab5-4458-b629-f86ea21c0234",
       "name": "Save the post",
       "credentials": {
         "supabaseApi": {
@@ -1325,22 +1210,6 @@
           "name": "Supabase - 2rum2room2"
         }
       }
-    },
-    {
-      "parameters": {
-        "content": "# Use any LLM provider\n\n- ollama\n- openrouter\n- openai\n- gemini\n- ...",
-        "height": 620,
-        "width": 420,
-        "color": 3
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        -220,
-        1280
-      ],
-      "id": "0a1774f3-a845-4bcf-b882-0d4a2233aeb0",
-      "name": "Sticky Note6"
     },
     {
       "parameters": {
@@ -1369,11 +1238,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        1700,
-        720
-      ],
-      "id": "903ece8a-f931-48a9-8b62-b33ff9bbfa71",
+      "position": [12880, 5180],
+      "id": "8b4058f8-b473-4490-b089-4a91cc145cff",
       "name": "Approve quarterly plan?"
     },
     {
@@ -1404,11 +1270,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1,
-      "position": [
-        760,
-        2840
-      ],
-      "id": "64d1130c-0587-40db-8690-3fc29ca68839",
+      "position": [11940, 7300],
+      "id": "0d99918a-1b24-4108-b16d-508f820ed41c",
       "name": "Generate new Instagram post"
     },
     {
@@ -1429,11 +1292,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1,
-      "position": [
-        1160,
-        720
-      ],
-      "id": "9e8ec2bb-d265-46e0-a6a3-80feecb2f75f",
+      "position": [12340, 5180],
+      "id": "62829ff0-dcb4-47fb-816c-c0a8e9a73340",
       "name": "Generate quarterly plan"
     },
     {
@@ -1443,11 +1303,8 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        540,
-        720
-      ],
-      "id": "30214202-81d1-4486-a668-7172d094f32c",
+      "position": [11720, 5180],
+      "id": "f7aacb6f-6584-4331-93ee-8914681df293",
       "name": "Quaterly plan aggregate"
     },
     {
@@ -1457,11 +1314,8 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        560,
-        1420
-      ],
-      "id": "80fbb9ea-113a-4c37-976d-a73a469a30e4",
+      "position": [11740, 5880],
+      "id": "56f0fc35-33ac-4fa1-bff3-532169869f8d",
       "name": "Monthly plan aggregate"
     },
     {
@@ -1471,11 +1325,8 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        560,
-        2080
-      ],
-      "id": "6da3b9f0-1a1e-4ff1-94d6-e45c6d1ee9c0",
+      "position": [11740, 6540],
+      "id": "92d9f012-3176-482e-b860-1dd2cd68c07a",
       "name": "Weekly plan aggregate"
     },
     {
@@ -1496,11 +1347,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1,
-      "position": [
-        1160,
-        1420
-      ],
-      "id": "a2f41bdc-dc5a-4cd7-9924-c13e2c865e16",
+      "position": [12340, 5880],
+      "id": "a8ab947a-13ca-4bfd-8e38-76ff878c3b92",
       "name": "Generate monthly plan"
     },
     {
@@ -1521,11 +1369,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.informationExtractor",
       "typeVersion": 1,
-      "position": [
-        1140,
-        2080
-      ],
-      "id": "b9c51156-8513-431b-9ed9-902c96cc0c03",
+      "position": [12320, 6540],
+      "id": "f16e51bc-9412-4445-bf4a-09fdc23c8873",
       "name": "Generate weekly plan"
     },
     {
@@ -1540,11 +1385,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        -100,
-        1600
-      ],
-      "id": "97beced4-9a89-4633-8555-228159ee95b9",
+      "position": [11080, 6060],
+      "id": "4826924b-2612-4d11-95d0-9765c965fc33",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
@@ -1556,47 +1398,39 @@
     {
       "parameters": {
         "content": "# [Watch the video on Youtube](https://youtu.be/x7kEfmQrHqo)",
-        "height": 180,
-        "width": 580
+        "height": 220,
+        "width": 500
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        960,
-        360
-      ],
-      "id": "e2b84a18-a740-4535-b2f2-d3cf9a755956",
+      "position": [12820, 4780],
+      "id": "c1e7c5db-9c99-4c2e-af6c-9d416298e9c2",
       "name": "Sticky Note7"
     },
     {
       "parameters": {
-        "content": "# Need help?\n\n## [Join our Discord server](https://discord.gg/G7FJVJQ6RE)",
-        "height": 180,
-        "width": 540
+        "content": "# Read the guides on GitHub\n\n## [Guide to setup Supabase](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_8/guide-supabase.md)\n## [Guide to setup Facebook (Instagram)](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_8/guide-instagram.md)",
+        "height": 220,
+        "width": 500
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1580,
-        360
-      ],
-      "id": "aa73f125-7d57-4a61-a0af-743dc8cfcc90",
-      "name": "Sticky Note8"
+      "position": [12260, 4780],
+      "id": "50c747b5-3814-4944-84d6-1bad0e4e75ec",
+      "name": "Sticky Note9"
     },
     {
       "parameters": {
-        "content": "# Read the guides on GitHub\n\n## [Guide to setup Supabase](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_8/guide-supabase.md)\n## [Guide to setup Facebook (Instagram)](https://github.com/gyoridavid/ai_agents_az/blob/main/episode_8/guide-instagram.md)",
-        "height": 180,
-        "width": 660
+        "content": "# Use any LLM provider\n\n- ollama\n- openrouter\n- openai\n- gemini\n- ...",
+        "height": 620,
+        "width": 420,
+        "color": 3
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        260,
-        360
-      ],
-      "id": "df751b80-eb5c-472c-b2c6-dadb019da0b4",
-      "name": "Sticky Note9"
+      "position": [10960, 5740],
+      "id": "f03acb2b-ce83-4d02-9379-738674906ca0",
+      "name": "Sticky Note10"
     }
   ],
   "pinData": {},
@@ -2154,11 +1988,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "a62dbdfb-2d05-4ff4-bc6b-3c5563ec1440",
+  "versionId": "71f8505c-e42c-4801-a527-296fc54ddd36",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "sVeJBX8POs1uesty",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

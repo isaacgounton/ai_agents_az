@@ -1,6 +1,19 @@
 {
-  "name": "Scrape link subworkflow",
+  "name": "My workflow 14",
   "nodes": [
+    {
+      "parameters": {
+        "content": "# 📚 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w5)\n\n## Be part of a growing community and help us create more content like this",
+        "height": 220,
+        "width": 860,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [4960, 740],
+      "id": "44f740f1-7849-4d41-bf55-57bb89ad4c08",
+      "name": "Sticky Note6"
+    },
     {
       "parameters": {
         "model": {
@@ -12,11 +25,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        1500,
-        680
-      ],
-      "id": "e6c9890c-5b74-4729-9d86-a583ad9e957a",
+      "position": [6480, 1320],
+      "id": "8c85a884-c71d-4032-b99e-4e9dc7325346",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
@@ -41,11 +51,8 @@
       },
       "type": "n8n-nodes-base.html",
       "typeVersion": 1.2,
-      "position": [
-        720,
-        440
-      ],
-      "id": "1847df7c-d220-4386-8a96-a747a7a2b64d",
+      "position": [5700, 1080],
+      "id": "ff97155c-8388-4b36-adea-f66dc79ec7b5",
       "name": "HTML"
     },
     {
@@ -55,11 +62,8 @@
       },
       "type": "n8n-nodes-base.markdown",
       "typeVersion": 1,
-      "position": [
-        940,
-        440
-      ],
-      "id": "27a619b8-a3d4-4b4d-a433-c2c38c01ac3f",
+      "position": [5920, 1080],
+      "id": "e0dbf57f-f261-4a38-a3a0-7e4b271dd3a1",
       "name": "Markdown"
     },
     {
@@ -69,11 +73,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
-      "position": [
-        1860,
-        660
-      ],
-      "id": "f1610517-e1c8-4e4f-bdbf-ed9b65e332e0",
+      "position": [6840, 1300],
+      "id": "31de760a-2d4f-48da-b8fc-7ebb02d1dc17",
       "name": "Structured Output Parser1"
     },
     {
@@ -88,11 +89,8 @@
       },
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1.1,
-      "position": [
-        0,
-        440
-      ],
-      "id": "89ac6c83-9382-4574-a529-f88b3614d8c2",
+      "position": [4980, 1080],
+      "id": "d72715ba-2e86-4fed-8472-93733c6f8419",
       "name": "When Executed by Another Workflow"
     },
     {
@@ -111,11 +109,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        240,
-        440
-      ],
-      "id": "23835380-937a-4705-832e-a9e912135b03",
+      "position": [5220, 1080],
+      "id": "7035b9a3-c838-4209-a33b-8df13982f379",
       "name": "get the content of the link",
       "alwaysOutputData": false,
       "onError": "continueErrorOutput"
@@ -157,11 +152,8 @@
       },
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
-      "position": [
-        480,
-        440
-      ],
-      "id": "78fc01c4-c891-4994-9b6e-d9b291fe5912",
+      "position": [5460, 1080],
+      "id": "3e8e7258-1f63-405c-95e9-6ee9a78775dd",
       "name": "filter out the errors"
     },
     {
@@ -191,11 +183,8 @@
       },
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
-      "position": [
-        1160,
-        440
-      ],
-      "id": "e8c8fd4b-89ba-4773-825e-41eef7c997ad",
+      "position": [6140, 1080],
+      "id": "9c20db8b-d300-4c18-9d26-a6c394d8d598",
       "name": "filter empty results"
     },
     {
@@ -204,11 +193,8 @@
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        1380,
-        440
-      ],
-      "id": "6bfb39a3-ab85-4cbb-a087-29b457cfe9d6",
+      "position": [6360, 1080],
+      "id": "2a43d357-b0bb-443f-89ef-f5efe3841524",
       "name": "cleanup the markdown"
     },
     {
@@ -219,11 +205,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
-      "position": [
-        1600,
-        440
-      ],
-      "id": "f487b563-4fb0-4622-96bb-a35a35980045",
+      "position": [6580, 1080],
+      "id": "6b61b922-d63d-4270-8de0-7ff8863ac5d7",
       "name": "summarize",
       "retryOnFail": true
     },
@@ -243,11 +226,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        1980,
-        440
-      ],
-      "id": "0bbc7a55-1e3d-4074-84f8-a9da0edc624b",
+      "position": [6960, 1080],
+      "id": "ba1e0a81-74f8-4dfa-9a13-5b11272b20ab",
       "name": "set data field"
     }
   ],
@@ -362,21 +342,17 @@
           }
         ]
       ]
-    },
-    "set data field": {
-      "main": [
-        []
-      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "f3b3a7a5-7f32-4105-bcf8-7445f93178d5",
+  "versionId": "fbb39ad4-0234-4e49-a5a2-98965fe25683",
   "meta": {
+    "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "0HtQ72bNs1lx7LHj",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

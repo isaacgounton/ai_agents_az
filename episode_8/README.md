@@ -1,6 +1,8 @@
 # Episode 8: Creating an AI influencer on Instagram using n8n
 
-[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+
+### Be part of a growing community and help us create more content like this
 
 ## Free n8n JSON workflow
 

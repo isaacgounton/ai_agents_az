@@ -1,15 +1,25 @@
 {
-  "name": "Create video with REST API",
+  "name": "My workflow 14",
   "nodes": [
+    {
+      "parameters": {
+        "content": "# 📚 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w7)\n\n## Be part of a growing community and help us create more content like this",
+        "height": 220,
+        "width": 860,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [13160, 4240],
+      "id": "44f740f1-7849-4d41-bf55-57bb89ad4c08",
+      "name": "Sticky Note6"
+    },
     {
       "parameters": {},
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
-      "position": [
-        -500,
-        0
-      ],
-      "id": "a5a3e8c4-3caf-4364-abc3-cc1bc856ba90",
+      "position": [13220, 4940],
+      "id": "fc1bbe6e-18d4-4f7f-a37d-275047839477",
       "name": "When clicking ‘Test workflow’"
     },
     {
@@ -19,11 +29,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmOllama",
       "typeVersion": 1,
-      "position": [
-        880,
-        440
-      ],
-      "id": "6290f0a8-5cc5-478e-a5dd-4e3eea7e34bf",
+      "position": [14600, 5380],
+      "id": "dab5ca2d-547f-4c97-99d5-aebb66829e60",
       "name": "Ollama Model",
       "credentials": {
         "ollamaApi": {
@@ -39,11 +46,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
-      "position": [
-        720,
-        320
-      ],
-      "id": "90375e21-18ae-4654-863f-4890c63d9ec8",
+      "position": [14440, 5260],
+      "id": "7767fe50-9d62-4913-97f5-3944e2f85774",
       "name": "Structured Output Parser"
     },
     {
@@ -62,11 +66,8 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        -180,
-        0
-      ],
-      "id": "f762a541-290e-4b1e-8455-6518563dc16b",
+      "position": [13540, 4940],
+      "id": "44055b10-a562-4984-84d3-b14d6f7b8e9a",
       "name": "Configure"
     },
     {
@@ -77,11 +78,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
-      "position": [
-        560,
-        0
-      ],
-      "id": "010aa83a-63d5-4a0f-905b-08c9048d8621",
+      "position": [14280, 4940],
+      "id": "d393eff0-433f-4b31-bbeb-b479af829fd8",
       "name": "Generate content",
       "retryOnFail": true
     },
@@ -96,22 +94,16 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1500,
-        0
-      ],
-      "id": "dc803a54-8b27-43b9-a25d-0238eaa9a33a",
+      "position": [15220, 4940],
+      "id": "e3c1ff07-1489-473e-8a08-d95ce3f62746",
       "name": "Start generating the video"
     },
     {
       "parameters": {},
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
-      "position": [
-        1880,
-        -20
-      ],
-      "id": "b11043dc-2886-4b59-bf1a-77c69b117a89",
+      "position": [15600, 4920],
+      "id": "5add0ce3-af27-415c-8443-181609ccb1fe",
       "name": "Wait",
       "webhookId": "fe4501f9-3334-4fc8-b3dd-83ea0ebb14a2"
     },
@@ -122,11 +114,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2680,
-        -120
-      ],
-      "id": "d84d7fcf-8fb1-4448-bf4b-294d0234ff96",
+      "position": [16400, 4820],
+      "id": "83f1eeae-144d-4fc5-a2d2-68e37a389bfb",
       "name": "Download the video",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -142,11 +131,8 @@
       },
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
-      "position": [
-        2920,
-        -120
-      ],
-      "id": "4aa43b38-d75c-4ecc-9544-f20f767dcffb",
+      "position": [16640, 4820],
+      "id": "4025512b-cb9c-4c1b-a97c-121dbdf1951d",
       "name": "Share on YouTube",
       "credentials": {
         "youTubeOAuth2Api": {
@@ -163,11 +149,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2100,
-        -20
-      ],
-      "id": "a81e85a6-7cd4-4913-930a-38243e067c6a",
+      "position": [15820, 4920],
+      "id": "619c0f0e-a538-46f4-8197-fd71d53bfcc2",
       "name": "Check video status",
       "alwaysOutputData": false,
       "retryOnFail": false
@@ -199,11 +182,8 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        2320,
-        -20
-      ],
-      "id": "e95fa54e-5e37-4ebc-9ef8-6aa15ca9d0d6",
+      "position": [16040, 4920],
+      "id": "bc015f67-766a-4d1d-b5e5-77898937e4c5",
       "name": "Ready?"
     },
     {
@@ -214,11 +194,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -220,
-        -240
-      ],
-      "id": "c7ffa392-e51c-47d1-8484-d55b592426d3",
+      "position": [13500, 4700],
+      "id": "447819a7-7df4-46c3-8b47-5e61c13218cd",
       "name": "Sticky Note"
     },
     {
@@ -228,11 +205,8 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        100,
-        0
-      ],
-      "id": "d6996735-2d5b-47c4-8b03-b500854cbb0d",
+      "position": [13820, 4940],
+      "id": "be03a505-90fd-4957-a7b6-d8b704088928",
       "name": "Get music tags"
     },
     {
@@ -242,11 +216,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
-      "position": [
-        1180,
-        220
-      ],
-      "id": "bd3a5fde-591f-4370-8c01-4fa2e31da209",
+      "position": [14900, 5160],
+      "id": "2468ffd9-a590-460d-acd0-0ec0a77ea234",
       "name": "Structured Output Parser1"
     },
     {
@@ -257,11 +228,8 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
-      "position": [
-        1040,
-        0
-      ],
-      "id": "a77636e3-be3c-448f-a2b0-400efe418865",
+      "position": [14760, 4940],
+      "id": "945e46fa-e687-4f39-92a8-be4cb4cd50e7",
       "name": "Pick the right music",
       "retryOnFail": true
     },
@@ -272,11 +240,8 @@
       },
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
-      "position": [
-        280,
-        0
-      ],
-      "id": "88035cf9-a503-4f84-8470-65a50e505c2e",
+      "position": [14000, 4940],
+      "id": "bc28a1c1-8f82-467f-9cfb-527e8c9c3648",
       "name": "Group the music tags"
     },
     {
@@ -287,11 +252,8 @@
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1840,
-        -200
-      ],
-      "id": "55a1717f-afbc-4c2d-b013-2a7d39e08e09",
+      "position": [15560, 4740],
+      "id": "156de771-0429-4ed3-bbfc-46baf4d0e2b0",
       "name": "Sticky Note1"
     }
   ],
@@ -468,11 +430,11 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "efadb478-93ee-4a6d-b4b7-80a7e250bf2d",
+  "versionId": "1fbd84d5-ed35-46b4-830c-84dea19669ba",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "KI8hRUNS9tBzzqMk",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

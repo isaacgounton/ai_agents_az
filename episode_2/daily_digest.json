@@ -1,5 +1,5 @@
 {
-  "name": "Daily digest",
+  "name": "My workflow 14",
   "nodes": [
     {
       "parameters": {
@@ -15,10 +15,10 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        -840,
-        400
+        -760,
+        880
       ],
-      "id": "0b16d999-8207-416c-9d8a-1c20b17a7a37",
+      "id": "546206f6-8979-47c4-b757-f2d15ea6b5e2",
       "name": "Schedule Trigger"
     },
     {
@@ -29,10 +29,10 @@
       "type": "n8n-nodes-base.rssFeedRead",
       "typeVersion": 1.1,
       "position": [
-        -300,
-        0
+        -220,
+        480
       ],
-      "id": "c699bcf1-7c0e-4ddc-9b4d-a350c4032778",
+      "id": "89afa486-1373-446a-9ad9-1e2c07440594",
       "name": "business insider"
     },
     {
@@ -43,10 +43,10 @@
       "type": "n8n-nodes-base.rssFeedRead",
       "typeVersion": 1.1,
       "position": [
-        -300,
-        -160
+        -220,
+        320
       ],
-      "id": "5696ca20-43b3-4913-b4fd-a1f82d975f60",
+      "id": "672b094a-8e74-4c3b-8d31-80cfeaf8a776",
       "name": "cnn"
     },
     {
@@ -54,10 +54,10 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        -80,
-        -80
+        0,
+        400
       ],
-      "id": "7f0cfcb2-2612-4f86-b0f2-b68a88ddfbad",
+      "id": "e94d4829-f060-4627-9542-1bbe2c327ff5",
       "name": "Merge"
     },
     {
@@ -83,10 +83,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        140,
-        -80
+        220,
+        400
       ],
-      "id": "73051173-2cd9-4689-9624-ea6e6558da20",
+      "id": "8123245c-c8d3-4582-b09c-973a5033a0e9",
       "name": "Edit Fields"
     },
     {
@@ -98,10 +98,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        360,
-        -80
+        440,
+        400
       ],
-      "id": "146994a7-67c9-446b-9fe4-cf36495859eb",
+      "id": "ba254ac3-59cd-4eaa-a9c4-2f6170e6b5eb",
       "name": "Aggregate"
     },
     {
@@ -112,10 +112,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        580,
-        -80
+        660,
+        400
       ],
-      "id": "68574ace-e7e4-49ce-b502-e97df8bf29bf",
+      "id": "844ffb78-1293-46d4-9bf7-331862aa326d",
       "name": "Basic LLM Chain"
     },
     {
@@ -130,10 +130,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        500,
-        140
+        580,
+        620
       ],
-      "id": "0f959448-8208-48b3-b8b3-2fc98e54b499",
+      "id": "85aaeebd-2359-4a8a-bc30-ae8115deb389",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
@@ -159,10 +159,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        940,
-        -80
+        1020,
+        400
       ],
-      "id": "684acea8-8df5-4e87-b656-f92b12f6ccbf",
+      "id": "505f25d0-b63b-4526-835c-9df9db98b6fd",
       "name": "Edit Fields1"
     },
     {
@@ -174,10 +174,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -380,
-        -300
+        -300,
+        180
       ],
-      "id": "ad462f94-bd3b-4c60-be31-2d2b5ffeb971",
+      "id": "446df485-9389-44a7-b247-fa8e689067fc",
       "name": "Sticky Note"
     },
     {
@@ -187,10 +187,10 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 3,
       "position": [
-        1880,
-        380
+        1960,
+        860
       ],
-      "id": "e1923af5-8e37-44c3-bd49-db9b64ddbfd9",
+      "id": "ecb7cd9f-4cf7-44eb-ab51-a46b22898a3e",
       "name": "Merge1"
     },
     {
@@ -202,10 +202,10 @@
       "type": "n8n-nodes-base.openWeatherMap",
       "typeVersion": 1,
       "position": [
-        -300,
-        700
+        -220,
+        1180
       ],
-      "id": "d5bf3c95-4427-4b67-9e98-9ee2d65aa754",
+      "id": "1b1b6e34-f0ac-4af2-9d9c-4763cedb9295",
       "name": "OpenWeatherMap",
       "credentials": {
         "openWeatherMapApi": {
@@ -222,10 +222,10 @@
       "type": "n8n-nodes-base.splitOut",
       "typeVersion": 1,
       "position": [
-        -60,
-        700
+        20,
+        1180
       ],
-      "id": "cac0b96d-0d38-44ed-b5a8-7516c648bb7c",
+      "id": "04b6ba60-6ee0-445d-99fa-6203c2357c20",
       "name": "Split Out"
     },
     {
@@ -256,10 +256,10 @@
       "type": "n8n-nodes-base.filter",
       "typeVersion": 2.2,
       "position": [
-        160,
-        700
+        240,
+        1180
       ],
-      "id": "24b87753-5c93-4465-ad1d-8b8ff28ff295",
+      "id": "41074405-36a2-4f5a-92cf-ba96645b82ec",
       "name": "Filter"
     },
     {
@@ -271,10 +271,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        380,
-        700
+        460,
+        1180
       ],
-      "id": "8878a4f7-344d-42a3-a2dd-feecf4ac8cda",
+      "id": "13ffe9ad-c9bc-4682-a12d-e74e91cc108b",
       "name": "Aggregate1"
     },
     {
@@ -285,10 +285,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        600,
-        700
+        680,
+        1180
       ],
-      "id": "3f602627-157d-41be-beb6-f793cf153bce",
+      "id": "fc02621c-bd2f-4724-b50c-a4bf321e771c",
       "name": "Basic LLM Chain1"
     },
     {
@@ -303,10 +303,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        560,
-        880
+        640,
+        1360
       ],
-      "id": "d2ead07a-ca9b-4a88-abd5-aaa7d8d131b4",
+      "id": "9c90e4ff-688c-418a-92b2-500c9e84b34b",
       "name": "OpenAI Chat Model1",
       "credentials": {
         "openAiApi": {
@@ -332,10 +332,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        960,
-        700
+        1040,
+        1180
       ],
-      "id": "5f4338b7-65a7-492a-b03f-5ae64f50b115",
+      "id": "2b89fe5d-8f0f-4e49-a532-c0b72d455c9a",
       "name": "Edit Fields2"
     },
     {
@@ -347,10 +347,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -380,
-        540
+        -300,
+        1020
       ],
-      "id": "a5538857-d109-4cfb-9657-1358bd22da5c",
+      "id": "ad6238da-20a8-4311-b996-9e05a883ad63",
       "name": "Sticky Note1"
     },
     {
@@ -369,10 +369,10 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -220,
-        1400
+        -140,
+        1880
       ],
-      "id": "4ae8e742-28aa-45eb-918e-db6e0c82d539",
+      "id": "fe170333-dd9d-4992-b417-681b8e8a3443",
       "name": "Gmail",
       "webhookId": "c485b21f-207d-4efb-9e85-566ff2e3de15",
       "credentials": {
@@ -405,10 +405,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        0,
-        1400
+        80,
+        1880
       ],
-      "id": "f644eea4-4049-483b-b3db-c74a8d7fbe69",
+      "id": "174d3816-15b3-4c5b-8429-e654451690fb",
       "name": "Edit Fields3"
     },
     {
@@ -420,10 +420,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        220,
-        1400
+        300,
+        1880
       ],
-      "id": "8b6de565-0a0d-47ff-b947-189240062045",
+      "id": "74d2edad-8d4a-4f7d-acf7-b46523ea8a6c",
       "name": "Aggregate2"
     },
     {
@@ -435,10 +435,10 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.5,
       "position": [
-        440,
-        1400
+        520,
+        1880
       ],
-      "id": "2a13a119-e213-4737-a720-af35fc5c9577",
+      "id": "ad4cd02d-d2a4-4c94-9d93-c8d1025d2506",
       "name": "Basic LLM Chain2"
     },
     {
@@ -453,10 +453,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        400,
-        1620
+        480,
+        2100
       ],
-      "id": "c94f0d02-c3aa-40c3-82dc-9acab3ecefeb",
+      "id": "0188e119-c4ed-4395-a8f8-cfda2d596aaa",
       "name": "OpenAI Chat Model2",
       "credentials": {
         "openAiApi": {
@@ -472,10 +472,10 @@
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        580,
-        1620
+        660,
+        2100
       ],
-      "id": "911a632f-b9be-44f3-94d3-0a7afa5bdc95",
+      "id": "dfc30db5-301f-448a-bc20-d80a35cc208d",
       "name": "Structured Output Parser"
     },
     {
@@ -495,10 +495,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        800,
-        1400
+        880,
+        1880
       ],
-      "id": "553c916b-8c64-4817-a02f-a4e22f378fd4",
+      "id": "0e1043d0-71ad-43e7-a1fb-dca55bbac2f4",
       "name": "Edit Fields4"
     },
     {
@@ -510,10 +510,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -380,
-        1320
+        -300,
+        1800
       ],
-      "id": "c8323aef-0af0-4390-8b21-54c284afaf9a",
+      "id": "ddab72eb-af03-4153-9d4b-000c51db4aeb",
       "name": "Sticky Note2"
     },
     {
@@ -531,17 +531,11 @@
       "type": "n8n-nodes-base.googleCalendar",
       "typeVersion": 1.3,
       "position": [
-        -260,
-        2160
+        -180,
+        2640
       ],
-      "id": "c5cc9012-51cf-40fa-9d16-f49d0a1ebeff",
-      "name": "Google Calendar",
-      "credentials": {
-        "googleCalendarOAuth2Api": {
-          "id": "Qys2Y2daXPMBhCyH",
-          "name": "Google Calendar account 2"
-        }
-      }
+      "id": "c316f6f7-f205-4759-b27f-358262f71720",
+      "name": "Google Calendar"
     },
     {
       "parameters": {
@@ -572,10 +566,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        -40,
-        2160
+        40,
+        2640
       ],
-      "id": "e30bef49-6dd7-4883-acb4-6317f47e16f6",
+      "id": "967aa856-fef4-454c-bbfa-5ebc8d138258",
       "name": "Edit Fields5"
     },
     {
@@ -587,10 +581,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        180,
-        2160
+        260,
+        2640
       ],
-      "id": "adb5dd8e-846a-4e6d-b1e9-b2ccfd6cb8df",
+      "id": "008d06e6-fe16-42ba-997d-9df9d209293f",
       "name": "Aggregate3"
     },
     {
@@ -610,10 +604,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        400,
-        2160
+        480,
+        2640
       ],
-      "id": "64b20097-2a25-4ee5-91c2-a54d89d2ed78",
+      "id": "f7eb428c-c645-492f-b681-e965139a725f",
       "name": "Edit Fields6"
     },
     {
@@ -625,10 +619,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -380,
-        1960
+        -300,
+        2440
       ],
-      "id": "1604da9b-d170-44c7-a834-6ece8201580a",
+      "id": "52bd710f-b474-49ac-b93e-78f194cfdcae",
       "name": "Sticky Note3"
     },
     {
@@ -654,10 +648,10 @@
       "type": "n8n-nodes-base.aggregate",
       "typeVersion": 1,
       "position": [
-        2100,
-        400
+        2180,
+        880
       ],
-      "id": "975c0dbb-a077-48d0-b5b3-a8a752bea03c",
+      "id": "cae01c8b-d668-4224-a927-ac280773eebd",
       "name": "Aggregate4"
     },
     {
@@ -695,10 +689,10 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        2320,
-        400
+        2400,
+        880
       ],
-      "id": "aef32391-f74c-4ca9-8985-73f8b573d264",
+      "id": "befcca45-1026-48be-abce-776d0bebcac5",
       "name": "Edit Fields7"
     },
     {
@@ -710,10 +704,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        3000,
-        400
+        3080,
+        880
       ],
-      "id": "99b4c5ec-7084-4eef-a10d-d022c37531cf",
+      "id": "a5034448-272b-4321-b78d-7f0fb4744fde",
       "name": "AI Agent"
     },
     {
@@ -728,10 +722,10 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        2920,
-        640
+        3000,
+        1120
       ],
-      "id": "8d436468-15e4-44be-b76c-cfe0e56fff6f",
+      "id": "148eef7a-a645-4967-a72b-887b68835afb",
       "name": "OpenAI Chat Model3",
       "credentials": {
         "openAiApi": {
@@ -751,10 +745,10 @@
       "type": "n8n-nodes-base.gmailTool",
       "typeVersion": 2.1,
       "position": [
-        3160,
-        620
+        3240,
+        1100
       ],
-      "id": "ed44dc4e-578f-48e4-9558-1ae6b50dc8f7",
+      "id": "eb93a9ae-996b-43f2-a62c-7faf6350144e",
       "name": "send_digest",
       "webhookId": "162a213b-823b-4420-8c95-05e882822299",
       "credentials": {
@@ -774,10 +768,10 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        2780,
-        300
+        2860,
+        780
       ],
-      "id": "90367bfc-2bb2-4a89-a0a3-cb3e637ab201",
+      "id": "8c215499-36f2-4903-8099-2d28f537c183",
       "name": "Sticky Note4"
     },
     {
@@ -789,11 +783,27 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1800,
-        240
+        1880,
+        720
       ],
-      "id": "88400a74-eba1-4721-8318-4d366b793cf3",
+      "id": "2e62acc6-e972-4428-bc9f-9fd546fd0fbf",
       "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "# 📚 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w2)\n\n## Be part of a growing community and help us create more content like this",
+        "height": 220,
+        "width": 860,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        -140
+      ],
+      "id": "44f740f1-7849-4d41-bf55-57bb89ad4c08",
+      "name": "Sticky Note6"
     }
   ],
   "pinData": {},
@@ -1175,11 +1185,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "8fa463c2-4112-4a7e-8883-0e467f16cbc0",
+  "versionId": "4110066c-8073-4e4d-a127-96077cb46794",
   "meta": {
-    "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "E7MvzxYrEXnM4sDf",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

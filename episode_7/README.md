@@ -1,6 +1,8 @@
 # Episode 7: Creating Youtube short videos using our custom MCP server
 
-[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw7)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw7)
+
+### Be part of a growing community and help us create more content like this
 
 <table>
   <tr>

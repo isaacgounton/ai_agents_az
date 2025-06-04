@@ -1,5 +1,5 @@
 {
-  "name": "Prescription refill agent",
+  "name": "My workflow 14",
   "nodes": [
     {
       "parameters": {
@@ -8,10 +8,10 @@
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
       "position": [
-        -480,
-        0
+        -340,
+        20
       ],
-      "id": "b58f9665-e6f2-4274-97a4-87a49689cfcf",
+      "id": "66b601bf-dc7b-4743-9205-9abdf7c48c6a",
       "name": "When chat message received",
       "webhookId": "d6279975-1aa7-44c1-8e15-1149ddd0a477"
     },
@@ -24,10 +24,10 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        -140,
-        -20
+        0,
+        0
       ],
-      "id": "826f3a05-bb08-40f8-aa1e-0ea87bd7ee51",
+      "id": "8a2e7e1a-0d75-4729-9d28-e46f2ee9fd2a",
       "name": "AI Agent"
     },
     {
@@ -37,10 +37,10 @@
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        -120,
-        240
+        20,
+        260
       ],
-      "id": "3d14e5b9-e1b8-4d47-8573-c7f10a5af176",
+      "id": "537d0124-7609-4ebf-a35d-26e96b16745a",
       "name": "Window Buffer Memory"
     },
     {
@@ -56,15 +56,15 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        -240,
-        240
+        -100,
+        260
       ],
-      "id": "b96cb794-ccfa-4316-bf5b-857b26433326",
+      "id": "404440c8-385f-44f1-ac63-a084827235ae",
       "name": "OpenAI Chat Model",
       "credentials": {
         "openAiApi": {
           "id": "9z2BF40dqIRV3ovL",
-          "name": "OpenAi account aiagentsaz"
+          "name": "OpenAI"
         }
       }
     },
@@ -85,15 +85,15 @@
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
       "position": [
-        40,
-        360
+        180,
+        380
       ],
-      "id": "4a6e1142-c118-4f1e-bc4a-9cb21eaec9c1",
+      "id": "a90b0de1-2e27-41db-9c9b-2f6dc618117f",
       "name": "notion_get_all_patients",
       "credentials": {
         "notionApi": {
           "id": "hadpTbTQdQ3XwOJm",
-          "name": "local n8n-notion"
+          "name": "Notion"
         }
       }
     },
@@ -114,15 +114,15 @@
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
       "position": [
-        180,
-        440
+        320,
+        460
       ],
-      "id": "08100637-a522-4b17-b7c5-d44a32395b51",
+      "id": "36cf2c44-9ff2-4f01-a30f-f36012ed2b69",
       "name": "notion_get_all_approved_prescriptions",
       "credentials": {
         "notionApi": {
           "id": "hadpTbTQdQ3XwOJm",
-          "name": "local n8n-notion"
+          "name": "Notion"
         }
       }
     },
@@ -143,15 +143,15 @@
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
       "position": [
-        240,
-        200
+        380,
+        220
       ],
-      "id": "54798506-b740-4c19-a2b4-8c49cac01525",
+      "id": "6ddf6bac-3778-4386-897e-703be5843b14",
       "name": "notion_get_all_medication_names",
       "credentials": {
         "notionApi": {
           "id": "hadpTbTQdQ3XwOJm",
-          "name": "local n8n-notion"
+          "name": "Notion"
         }
       }
     },
@@ -184,17 +184,32 @@
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
       "position": [
-        420,
-        200
+        560,
+        220
       ],
-      "id": "98a42472-94f3-49da-b98c-73f2a8ccf860",
+      "id": "ed3f5d9b-2722-43ed-a448-0a855d14f3f8",
       "name": "notion_add_order",
       "credentials": {
         "notionApi": {
           "id": "hadpTbTQdQ3XwOJm",
-          "name": "local n8n-notion"
+          "name": "Notion"
         }
       }
+    },
+    {
+      "parameters": {
+        "content": "# 🚀 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w1)\n\n## Help us to create more content like this",
+        "height": 220,
+        "width": 800
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        -320
+      ],
+      "id": "5e25fdd1-5be8-4d94-8e70-9dcb9597e967",
+      "name": "Sticky Note"
     }
   ],
   "pinData": {},
@@ -281,11 +296,10 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "cda193d6-df39-466b-bf44-8cbeb0743917",
+  "versionId": "43030c7e-0ef6-4765-a3b9-ec108d64ac26",
   "meta": {
-    "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
-  "id": "LLxs2jwlPWDUX0XN",
+  "id": "ucEHSGg73IPzhX1n",
   "tags": []
 }

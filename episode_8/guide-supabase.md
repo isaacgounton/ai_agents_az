@@ -1,6 +1,8 @@
 # Guide to create and setup the Supabase account
 
-[Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw8)
+
+### Be part of a growing community and help us create more content like this
 
 Start by heading to [Supabase](https://supabase.com/) and create a new free account.
 
