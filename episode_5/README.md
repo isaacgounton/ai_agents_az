@@ -1,6 +1,6 @@
 # Episode 5: Creating a blog writing system using deep research
 
-## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw5)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az/about?gw5)
 
 ### Be part of a growing community and help us create more content like this
 

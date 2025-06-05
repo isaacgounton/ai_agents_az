@@ -1,6 +1,6 @@
 # Episode 1: Prescription refill AI agent with n8n
 
-## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw1)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az/about?gw1)
 
 ### Be part of a growing community and help us create more content like this
 

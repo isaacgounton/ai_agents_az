@@ -1,6 +1,6 @@
 # Episode 6: Lead generation with X-Ray search and LinkedIn
 
-## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?gw6)
+## [📚 Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az/about?gw6)
 
 ### Be part of a growing community and help us create more content like this
 

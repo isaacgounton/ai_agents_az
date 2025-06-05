@@ -7,10 +7,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
       "typeVersion": 1.1,
-      "position": [
-        -340,
-        20
-      ],
+      "position": [-340, 20],
       "id": "66b601bf-dc7b-4743-9205-9abdf7c48c6a",
       "name": "When chat message received",
       "webhookId": "d6279975-1aa7-44c1-8e15-1149ddd0a477"
@@ -23,10 +20,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
-      "position": [
-        0,
-        0
-      ],
+      "position": [0, 0],
       "id": "8a2e7e1a-0d75-4729-9d28-e46f2ee9fd2a",
       "name": "AI Agent"
     },
@@ -36,10 +30,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
-      "position": [
-        20,
-        260
-      ],
+      "position": [20, 260],
       "id": "537d0124-7609-4ebf-a35d-26e96b16745a",
       "name": "Window Buffer Memory"
     },
@@ -55,10 +46,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        -100,
-        260
-      ],
+      "position": [-100, 260],
       "id": "404440c8-385f-44f1-ac63-a084827235ae",
       "name": "OpenAI Chat Model",
       "credentials": {
@@ -84,10 +72,7 @@
       },
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
-      "position": [
-        180,
-        380
-      ],
+      "position": [180, 380],
       "id": "a90b0de1-2e27-41db-9c9b-2f6dc618117f",
       "name": "notion_get_all_patients",
       "credentials": {
@@ -113,10 +98,7 @@
       },
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
-      "position": [
-        320,
-        460
-      ],
+      "position": [320, 460],
       "id": "36cf2c44-9ff2-4f01-a30f-f36012ed2b69",
       "name": "notion_get_all_approved_prescriptions",
       "credentials": {
@@ -142,10 +124,7 @@
       },
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
-      "position": [
-        380,
-        220
-      ],
+      "position": [380, 220],
       "id": "6ddf6bac-3778-4386-897e-703be5843b14",
       "name": "notion_get_all_medication_names",
       "credentials": {
@@ -183,10 +162,7 @@
       },
       "type": "n8n-nodes-base.notionTool",
       "typeVersion": 2.2,
-      "position": [
-        560,
-        220
-      ],
+      "position": [560, 220],
       "id": "ed3f5d9b-2722-43ed-a448-0a855d14f3f8",
       "name": "notion_add_order",
       "credentials": {
@@ -198,16 +174,13 @@
     },
     {
       "parameters": {
-        "content": "# 🚀 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az?w1)\n\n## Help us to create more content like this",
+        "content": "# 🚀 [Join our Skool community for support, premium content and more!](https://www.skool.com/ai-agents-az/about?w1)\n\n## Help us to create more content like this",
         "height": 220,
         "width": 800
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        -380,
-        -320
-      ],
+      "position": [-380, -320],
       "id": "5e25fdd1-5be8-4d94-8e70-9dcb9597e967",
       "name": "Sticky Note"
     }
