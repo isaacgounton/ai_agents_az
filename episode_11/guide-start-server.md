@@ -26,7 +26,7 @@
 
 We recommend using Coolify to deploy the server to the cloud. Use the Docker image `gyoridavid/ai-agents-no-code-tools:latest` to deploy the server, and map port `8000` to the host.
 
-We recommend using [Runpod serverless](https://runpod.io?ref=2zyvy637) for GPU instances.
+We recommend using [Runpod Pods](https://runpod.io?ref=2zyvy637) for GPU instances.
 
 ![alt text](coolify.png)
 
