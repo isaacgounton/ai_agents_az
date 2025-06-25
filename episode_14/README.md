@@ -18,3 +18,7 @@ In this video, we show you how to use Bytedance’s Seedance to create AI videos
 ## Watch the video
 
 [![This n8n Seedance workflow is a smoking gun (and it’s FREE) - NO-CODE AI video automation](https://img.youtube.com/vi/CtEa6BFlQG0/0.jpg)](https://www.youtube.com/watch?v=CtEa6BFlQG0)
+
+## Price comparison between Seedance, Hailuo 2 and Veo 3
+
+![Seedance vs Hailuo 2 vs Veo 3 price comparison](price_comparison.png)
