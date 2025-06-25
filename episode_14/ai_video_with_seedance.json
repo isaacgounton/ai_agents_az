@@ -808,50 +808,6 @@
       "webhookId": "1b24d810-a844-4c10-81f9-edcee9a4d0ec"
     },
     {
-      "parameters": {
-        "method": "POST",
-        "url": "https://queue.fal.run/fal-ai/bytedance/seedance/v1/pro/text-to-video",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "prompt",
-              "value": "=<Characters>\n{{ $json.output.characters.map(character => `<Character>\n  <Name>${character.name}</Name>\n  <Description>${character.description}</Description>\n</Character>`).join('\\n') }}\n</Characters>\n\n<SceneDescription>\n{{ $json.output.scene_description }}\n</SceneDescription>\n\n<CameraMovements>\n{{ $json.output.camera_movement }}\n</CameraMovements>\n\n<ObjectMovements>\n{{ $json.output.object_movements }}\n</ObjectMovements>"
-            },
-            {
-              "name": "aspect_ratio",
-              "value": "={{ $('On form submission').item.json['Aspect ratio'] }}"
-            },
-            {
-              "name": "resolution",
-              "value": "={{ $('On form submission').item.json.Resolution }}"
-            },
-            {
-              "name": "duration",
-              "value": "={{ parseInt($('On form submission').item.json.Duration, 10) }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
-      "position": [
-        -260,
-        1520
-      ],
-      "id": "3dfb1423-c1c0-4802-a372-bc30be8cbed0",
-      "name": "Start generating the video",
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "BUYuOe8V0hqLtA02",
-          "name": "fal.ai"
-        }
-      }
-    },
-    {
       "parameters": {},
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
@@ -1188,23 +1144,69 @@
       ],
       "id": "8701b777-d751-4df9-a9e6-dd5221c43fdc",
       "name": "Sticky Note6"
-    }
-  ],
-  "pinData": {
-    "On form submission": [
-      {
-        "json": {
-          "Story": "create a video where 3 chickens are facing the camera, and dancing with their heads bobbing to the beat, like a music video, they have golden chains in their neck and sunglasses\r\nthey should start dancing in the daylight, then they should dance in the night and when the sun goes up, they are still dancing",
-          "Number of scenes": 3,
-          "Aspect ratio": "16:9",
-          "Resolution": "480p",
-          "Duration": "5",
-          "submittedAt": "2025-06-24T15:16:51.221-04:00",
-          "formMode": "test"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/bytedance/seedance/v1/pro/text-to-video",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "prompt",
+              "value": "=<Characters>\n{{ $json.output.characters.map(character => `<Character>\n  <Name>${character.name}</Name>\n  <Description>${character.description}</Description>\n</Character>`).join('\\n') }}\n</Characters>\n\n<SceneDescription>\n{{ $json.output.scene_description }}\n</SceneDescription>\n\n<CameraMovements>\n{{ $json.output.camera_movement }}\n</CameraMovements>\n\n<ObjectMovements>\n{{ $json.output.object_movements }}\n</ObjectMovements>"
+            },
+            {
+              "name": "aspect_ratio",
+              "value": "={{ $('On form submission').item.json['Aspect ratio'] }}"
+            },
+            {
+              "name": "resolution",
+              "value": "={{ $('On form submission').item.json.Resolution }}"
+            },
+            {
+              "name": "duration",
+              "value": "={{ parseInt($('On form submission').item.json.Duration, 10) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -260,
+        1520
+      ],
+      "id": "3dfb1423-c1c0-4802-a372-bc30be8cbed0",
+      "name": "Start generating the video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "BUYuOe8V0hqLtA02",
+          "name": "fal.ai"
         }
       }
-    ]
-  },
+    },
+    {
+      "parameters": {
+        "content": "# fal.ai API key should be added in the following format:\n\n1. Select the `Header Authentication` node\n2. Use the following key: `Authorization`\n3. Value should be: `Key $YOUR_API_KEY`",
+        "height": 300,
+        "width": 660,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        1700
+      ],
+      "id": "23538bd9-26cc-4ec4-b9db-86ea708b7d95",
+      "name": "Sticky Note7"
+    }
+  ],
+  "pinData": {},
   "connections": {
     "OpenAI Chat Model": {
       "ai_languageModel": [
@@ -1409,17 +1411,6 @@
         ]
       ]
     },
-    "Start generating the video": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Items",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Wait for the video": {
       "main": [
         [
@@ -1597,13 +1588,24 @@
           }
         ]
       ]
+    },
+    "Start generating the video": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "43d62336-404f-41d5-9cd4-c29118b88fd7",
+  "versionId": "3f51c7bc-439e-4f38-ba42-4114bed36fb2",
   "meta": {
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
   },
