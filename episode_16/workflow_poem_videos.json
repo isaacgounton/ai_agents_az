@@ -25,11 +25,7 @@
           "parameters": [
             {
               "name": "model",
-<<<<<<< Updated upstream
-              "value": "black-forest-labs/FLUX.1-schnell"
-=======
               "value": "black-forest-labs/FLUX.1-schnell-Free"
->>>>>>> Stashed changes
             },
             {
               "name": "prompt",
@@ -2229,11 +2225,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-<<<<<<< Updated upstream
-  "versionId": "f3604044-10bd-468f-a947-37e933702816",
-=======
-  "versionId": "be82f181-0757-486e-a598-96519e7337c7",
->>>>>>> Stashed changes
+  "versionId": "745ca880-9ad6-4d62-9580-dc99d619d3cc",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "636db6b6ab21a21c6458e2137f340e33dc3e49f5a1c560c8d1e2372c227cf40e"
